@@ -1,0 +1,19 @@
+program TESTEDELPHI;
+
+uses
+  Vcl.Forms,
+  MenuPrincipal in 'MenuPrincipal.pas' {frmPrincipal},
+  uDTMConexao in 'datamodule\uDTMConexao.pas' {dtmPrincipal: TDataModule},
+  TelaConfiguracao in 'TelaConfiguracao.pas' {frmTelaConfiguracao},
+  TelaCadastrosProdutos in 'TelaCadastrosProdutos.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmTelaConfiguracao, frmTelaConfiguracao);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

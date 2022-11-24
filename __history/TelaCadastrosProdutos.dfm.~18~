@@ -1,0 +1,8 @@
+inherited frmTelaCadastrosProdutos: TfrmTelaCadastrosProdutos
+  Caption = 'Cadastros de Produtos'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited btnCadastrar: TBitBtn
+    OnClick = btnCadastrarClick
+  end
+end

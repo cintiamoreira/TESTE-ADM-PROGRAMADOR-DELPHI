@@ -1,0 +1,82 @@
+object frmTelaCadastrosProdutos: TfrmTelaCadastrosProdutos
+  Left = 0
+  Top = 0
+  Caption = 'Cadastros de Produtos'
+  ClientHeight = 560
+  ClientWidth = 879
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 0
+    Width = 879
+    Height = 504
+    Align = alClient
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 504
+    Width = 879
+    Height = 56
+    Align = alBottom
+    Caption = 'Panel1'
+    TabOrder = 1
+  end
+  object btnCadastrar: TBitBtn
+    Left = 544
+    Top = 527
+    Width = 75
+    Height = 25
+    Caption = 'Cadastrar'
+    TabOrder = 2
+  end
+  object btnEditar: TBitBtn
+    Left = 625
+    Top = 527
+    Width = 75
+    Height = 25
+    Caption = 'Editar'
+    TabOrder = 3
+  end
+  object btnDeletar: TBitBtn
+    Left = 706
+    Top = 527
+    Width = 75
+    Height = 25
+    Caption = 'Deletar'
+    TabOrder = 4
+  end
+  object btnSair: TBitBtn
+    Left = 787
+    Top = 527
+    Width = 75
+    Height = 25
+    Caption = 'Sair'
+    TabOrder = 5
+    OnClick = btnSairClick
+  end
+  object qryListagemProdutos: TZQuery
+    Connection = dtmPrincipal.ConexaoDB
+    Params = <>
+    Left = 32
+    Top = 512
+  end
+  object dtsListagemProdutos: TDataSource
+    Left = 144
+    Top = 512
+  end
+end

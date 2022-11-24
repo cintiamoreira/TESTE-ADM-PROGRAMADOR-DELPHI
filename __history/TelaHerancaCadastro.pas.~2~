@@ -1,0 +1,48 @@
+unit TelaHerancaCadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids, ZAbstractRODataset, ZAbstractDataset,
+  ZDataset, uDTMConexao;
+
+type
+  TfrmTelaCadastrosProdutos = class(TForm)
+    grdListagemProdutos: TDBGrid;
+    Panel1: TPanel;
+    btnCadastrar: TBitBtn;
+    btnEditar: TBitBtn;
+    btnDeletar: TBitBtn;
+    btnSair: TBitBtn;
+    qryListagemProdutos: TZQuery;
+    dtsListagemProdutos: TDataSource;
+    procedure btnSairClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmTelaCadastrosProdutos: TfrmTelaCadastrosProdutos;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmTelaCadastrosProdutos.btnSairClick(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+procedure TfrmTelaCadastrosProdutos.FormCreate(Sender: TObject);
+begin
+    qryListagemProdutos.Connection := dtmPrincipal.ConexaoDB;
+    dtsListagemProdutos.DataSet := qryListagemProdutos;
+    grdListagemProdutos.DataSource := dtsListagemProdutos;
+end;
+
+end.

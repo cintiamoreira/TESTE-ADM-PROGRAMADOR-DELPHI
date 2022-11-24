@@ -1,0 +1,67 @@
+unit TelaHeranca;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids, ZAbstractRODataset, ZAbstractDataset,
+  ZDataset, uDTMConexao;
+
+type
+  TfrmTelaHerancaCadastros = class(TForm)
+    grdListagem: TDBGrid;
+    Panel1: TPanel;
+    btnCadastrar: TBitBtn;
+    btnEditar: TBitBtn;
+    btnDeletar: TBitBtn;
+    btnSair: TBitBtn;
+    qryListagem: TZQuery;
+    dtsListagem: TDataSource;
+    procedure btnSairClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure btnCadastrarClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmTelaHerancaCadastros: TfrmTelaHerancaCadastros;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TfrmTelaHerancaCadastros.btnCadastrarClick(Sender: TObject);
+begin
+    btnCadastrar.Enabled := false;
+    btnEditar.Enabled := false;
+    btnDeletar.Enabled := false;
+    btnSair.Enabled := False;
+end;
+
+procedure TfrmTelaHerancaCadastros.btnEditarClick(Sender: TObject);
+begin
+    btnCadastrar.Enabled := false;
+    btnEditar.Enabled := false;
+    btnDeletar.Enabled := false;
+    btnSair.Enabled := False;
+end;
+
+procedure TfrmTelaHerancaCadastros.btnSairClick(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+procedure TfrmTelaHerancaCadastros.FormCreate(Sender: TObject);
+begin
+    qryListagem.Connection := dtmPrincipal.ConexaoDB;
+    dtsListagem.DataSet := qryListagem;
+    grdListagem.DataSource := dtsListagem;
+end;
+
+end.

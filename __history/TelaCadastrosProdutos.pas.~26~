@@ -1,0 +1,26 @@
+unit TelaCadastrosProdutos;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB,
+  ZAbstractRODataset, ZAbstractDataset, ZDataset, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids, TelaHeranca;
+
+type
+  TfrmTelaCadastrosProdutos = class(TfrmTelaHerancaCadastros)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmTelaCadastrosProdutos: TfrmTelaCadastrosProdutos;
+
+implementation
+
+{$R *.dfm}
+
+end.
