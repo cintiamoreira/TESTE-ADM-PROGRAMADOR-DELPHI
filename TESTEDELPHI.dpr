@@ -2,7 +2,8 @@ program TESTEDELPHI;
 
 uses
   Vcl.Forms,
-  MenuPrincipal in 'MenuPrincipal.pas' {frmPrincipal};
+  MenuPrincipal in 'MenuPrincipal.pas' {frmPrincipal},
+  uDTMConexao in 'datamodule\uDTMConexao.pas' {dtmPrincipal: TDataModule};
 
 {$R *.res}
 
