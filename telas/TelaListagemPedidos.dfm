@@ -1,8 +1,14 @@
 inherited frmTelaListagemPedidos: TfrmTelaListagemPedidos
   Caption = 'Listagem de Pedidos'
+  ClientHeight = 548
+  ClientWidth = 917
+  ExplicitWidth = 933
+  ExplicitHeight = 587
   PixelsPerInch = 96
   TextHeight = 13
   inherited grdListagem: TDBGrid
+    Width = 917
+    Height = 507
     DataSource = dtsListagem
     Columns = <
       item
@@ -47,6 +53,8 @@ inherited frmTelaListagemPedidos: TfrmTelaListagemPedidos
       end>
   end
   inherited Panel1: TPanel
+    Top = 507
+    Width = 917
     inherited btnCadastrar: TBitBtn
       OnClick = btnCadastrarClick
     end

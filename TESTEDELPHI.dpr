@@ -14,7 +14,8 @@ uses
   TelaCadastroPedidos in 'telas\TelaCadastroPedidos.pas' {frmTelaCadastroPedidos},
   TelaCadastroClientes in 'telas\TelaCadastroClientes.pas' {frmTelaCadastroClientes},
   TelaListagemPedidos in 'telas\TelaListagemPedidos.pas' {frmTelaListagemPedidos},
-  TelaListagemClientes in 'telas\TelaListagemClientes.pas' {frmTelaListagemClientes};
+  TelaListagemClientes in 'telas\TelaListagemClientes.pas' {frmTelaListagemClientes},
+  cProdutos in 'classes\cProdutos.pas';
 
 {$R *.res}
 
