@@ -118,13 +118,30 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="telas\TelaListagemProdutos.pas">
-            <Form>frmTelaHerancaListagem1</Form>
+            <Form>frmTelaListagemProdutos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="TelaHerancaCadastro.pas">
             <Form>frmTelaHerancaCadastro</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="telas\TelaCadastroProdutos.pas">
+            <Form>frmTelaCadastroProdutos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="telas\TelaCadastroPedidos.pas">
+            <Form>frmTelaCadastroPedidos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="telas\TelaCadastroClientes.pas">
+            <Form>frmTelaCadastroClientes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="telas\TelaListagemPedidos.pas">
+            <Form>frmTelaListagemPedidos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="telas\TelaListagemClientes.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
