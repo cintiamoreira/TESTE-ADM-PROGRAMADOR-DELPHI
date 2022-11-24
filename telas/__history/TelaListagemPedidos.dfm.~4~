@@ -1,0 +1,73 @@
+inherited frmTelaListagemPedidos: TfrmTelaListagemPedidos
+  Caption = 'Listagem de Pedidos'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited grdListagem: TDBGrid
+    DataSource = dtsListagem
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'NomeCliente'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DataCompra'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ValorTotal'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'QuantidadeTotal'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NomeProduto'
+        Visible = True
+      end>
+  end
+  inherited Panel1: TPanel
+    inherited btnCadastrar: TBitBtn
+      OnClick = btnCadastrarClick
+    end
+    inherited btnFechar: TBitBtn
+      OnClick = btnFecharClick
+    end
+  end
+  inherited qryListagem: TZQuery
+    Active = True
+    SQL.Strings = (
+      'select CONCAT(c.nome, '#39' '#39', c.sobrenome) as NomeCliente,'
+      'p.data_inclusao as DataCompra,'
+      'p.valor_total as ValorTotal,'
+      'p.qtd_total as QuantidadeTotal,'
+      'pr.nome as NomeProduto'
+      'from pedidos as p '
+      'LEFT JOIN clientes as c'
+      'ON c.id = p.id_cliente'
+      'LEFT JOIN produtos as pr'
+      'ON pr.id = p.id_produto;')
+    object qryListagemNomeCliente: TWideStringField
+      FieldName = 'NomeCliente'
+      ReadOnly = True
+      Size = 41
+    end
+    object qryListagemDataCompra: TDateTimeField
+      FieldName = 'DataCompra'
+    end
+    object qryListagemValorTotal: TFloatField
+      FieldName = 'ValorTotal'
+    end
+    object qryListagemQuantidadeTotal: TIntegerField
+      FieldName = 'QuantidadeTotal'
+    end
+    object qryListagemNomeProduto: TWideStringField
+      FieldName = 'NomeProduto'
+    end
+  end
+end

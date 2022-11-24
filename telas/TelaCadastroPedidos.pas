@@ -21,6 +21,8 @@ type
     edtDescontoPromocional: TEdit;
     lblDataEdicao: TLabel;
     edtDataEdicao: TEdit;
+    Label1: TLabel;
+    Edit1: TEdit;
     procedure btnSairClick(Sender: TObject);
   private
     { Private declarations }

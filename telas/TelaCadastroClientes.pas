@@ -5,22 +5,30 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, TelaHerancaCadastro, Vcl.StdCtrls,
-  Vcl.Buttons, Vcl.ExtCtrls;
+  Vcl.Buttons, Vcl.ExtCtrls, Vcl.Mask, RxToolEdit;
 
 type
   TfrmTelaCadastroClientes = class(TfrmTelaHerancaCadastro)
     edtNome: TEdit;
     edtValor: TEdit;
-    edtQuantidade: TEdit;
     lblNome: TLabel;
     lblValor: TLabel;
     Quantidade: TLabel;
     lblDataInclusao: TLabel;
-    edtDataInclusao: TEdit;
     lblDescontoPromocional: TLabel;
     edtDescontoPromocional: TEdit;
     lblDataEdicao: TLabel;
-    edtDataEdicao: TEdit;
+    Label1: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Label2: TLabel;
+    Edit3: TEdit;
+    Label3: TLabel;
+    MaskEdit1: TMaskEdit;
+    DateEdit1: TDateEdit;
+    DateEdit2: TDateEdit;
+    DateEdit3: TDateEdit;
+    DateEdit4: TDateEdit;
     procedure btnSairClick(Sender: TObject);
   private
     { Private declarations }

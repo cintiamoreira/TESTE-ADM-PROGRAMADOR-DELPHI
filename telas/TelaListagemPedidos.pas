@@ -10,6 +10,14 @@ uses
 
 type
   TfrmTelaListagemPedidos = class(TfrmTelaHerancaListagem)
+    qryListagemid: TIntegerField;
+    qryListagemid_produto: TIntegerField;
+    qryListagemid_cliente: TIntegerField;
+    qryListagemqtd_total: TIntegerField;
+    qryListagemvalor_total: TFloatField;
+    qryListagemvalor_total_desconto: TFloatField;
+    qryListagemdata_inclusao: TDateTimeField;
+    qryListagemdata_edicao: TDateTimeField;
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
   private

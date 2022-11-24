@@ -10,6 +10,16 @@ uses
 
 type
   TfrmTelaListagemClientes = class(TfrmTelaHerancaListagem)
+    qryListagemid: TIntegerField;
+    qryListagemnome: TWideStringField;
+    qryListagemsobrenome: TWideStringField;
+    qryListagemcpf: TWideStringField;
+    qryListagemendereco: TWideStringField;
+    qryListagemcep: TWideStringField;
+    qryListagemtelefone: TWideStringField;
+    qryListagemcelular: TWideStringField;
+    qryListagemdata_inclusao: TDateTimeField;
+    qryListagemdata_edicao: TDateTimeField;
     procedure btnCadastrarClick(Sender: TObject);
     procedure btnFecharClick(Sender: TObject);
   private
