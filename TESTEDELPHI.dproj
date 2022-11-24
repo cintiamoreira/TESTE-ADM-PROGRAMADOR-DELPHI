@@ -98,8 +98,8 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="TESTE.pas">
-            <Form>Form1</Form>
+        <DCCReference Include="MenuPrincipal.pas">
+            <Form>frmPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

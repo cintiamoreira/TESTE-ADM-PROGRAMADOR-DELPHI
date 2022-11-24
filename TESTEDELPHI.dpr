@@ -2,13 +2,13 @@ program TESTEDELPHI;
 
 uses
   Vcl.Forms,
-  TESTE in 'TESTE.pas' {Form1};
+  MenuPrincipal in 'MenuPrincipal.pas' {frmPrincipal};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.Run;
 end.
