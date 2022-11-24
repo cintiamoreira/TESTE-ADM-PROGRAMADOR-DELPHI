@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C1401EAF-DDED-4C72-A18A-7EFDD6940FE3}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TESTEDELPHI.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Delphi e sql server\Vendas.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TESTEDELPHI">
+        <MSBuild Projects="TESTEDELPHI.dproj"/>
+    </Target>
+    <Target Name="TESTEDELPHI:Clean">
+        <MSBuild Projects="TESTEDELPHI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TESTEDELPHI:Make">
+        <MSBuild Projects="TESTEDELPHI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Vendas">
+        <MSBuild Projects="..\Delphi e sql server\Vendas.dproj"/>
+    </Target>
+    <Target Name="Vendas:Clean">
+        <MSBuild Projects="..\Delphi e sql server\Vendas.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Vendas:Make">
+        <MSBuild Projects="..\Delphi e sql server\Vendas.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TESTEDELPHI;Vendas"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TESTEDELPHI:Clean;Vendas:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TESTEDELPHI:Make;Vendas:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
