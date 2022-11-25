@@ -44,7 +44,7 @@ type
   public
     constructor Create (AOwner: TComponent; const estadoInicial: TEstadoCadastro; const produtoInicial: TProdutos);
     { Public declarations }
-    published
+  published
 
     property estado : TEstadoCadastro  read getEstadoCadastro  write setEstadoCadastro;
     property produto : TProdutos  read getProduto  write setProduto;

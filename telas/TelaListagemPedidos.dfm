@@ -56,24 +56,28 @@ inherited frmTelaListagemPedidos: TfrmTelaListagemPedidos
     Top = 507
     Width = 697
     ExplicitTop = 507
-    ExplicitWidth = 917
+    ExplicitWidth = 697
     inherited btnCadastrar: TBitBtn
       Left = 358
       Anchors = [akRight, akBottom]
       OnClick = btnCadastrarClick
+      ExplicitLeft = 358
     end
     inherited btnEditar: TBitBtn
       Left = 439
       Anchors = [akRight, akBottom]
+      ExplicitLeft = 439
     end
     inherited btnDeletar: TBitBtn
       Left = 520
       Anchors = [akRight, akBottom]
+      ExplicitLeft = 520
     end
     inherited btnFechar: TBitBtn
       Left = 601
       Anchors = [akRight, akBottom]
       OnClick = btnFecharClick
+      ExplicitLeft = 601
     end
   end
   inherited dtsListagem: TDataSource
