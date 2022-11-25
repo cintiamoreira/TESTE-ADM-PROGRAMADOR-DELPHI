@@ -76,12 +76,15 @@ inherited frmTelaListagemClientes: TfrmTelaListagemClientes
     Top = 559
     Width = 917
     ExplicitTop = 559
-    ExplicitWidth = 1104
+    ExplicitWidth = 917
     inherited btnCadastrar: TBitBtn
       OnClick = btnCadastrarClick
     end
     inherited btnEditar: TBitBtn
       OnClick = btnEditarClick
+    end
+    inherited btnDeletar: TBitBtn
+      OnClick = btnDeletarClick
     end
     inherited btnFechar: TBitBtn
       OnClick = btnFecharClick

@@ -114,7 +114,6 @@ begin
       ConexaoDB.StartTransaction;
       Qry.ExecSQL;
       ConexaoDB.Commit;
-      QryListagem.Refresh;
       Result := True;
     except
       ConexaoDB.Rollback;

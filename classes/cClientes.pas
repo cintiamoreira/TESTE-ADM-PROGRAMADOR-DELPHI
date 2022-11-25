@@ -23,6 +23,7 @@ type
   //Variáveis Privadas somente dentro da Classe
 
     ConexaoDB : TZConnection;
+    QryListagem : TZQuery;
     //Campos
     //varchar = string
     F_id : Integer;
@@ -61,7 +62,7 @@ type
   public
   //Construtor de uma Classe
 
-    constructor Create (aConexao : TZConnection);
+    constructor Create (aConexao : TZConnection; qryListagem : TZQuery);
 
     destructor Destroy; override;
 
@@ -89,9 +90,10 @@ type
 implementation
 
 {$REGION 'Constructor and Destructor'}
-constructor TClientes.Create (aConexao : TZConnection);
+constructor TClientes.Create (aConexao : TZConnection; qryListagem: TZQuery);
 begin
   ConexaoDB := aConexao;
+  QryListagem := qryListagem;
 end;
 
 destructor TClientes.Destroy;
@@ -117,15 +119,16 @@ begin
     Qry := TZQuery.Create(nil);
     Qry.Connection := ConexaoDB;
     Qry.SQL.Clear;
-    Qry.SQL.Add('DELETE FROM categorias ' +
-                '   WHERE categoriaId =:categoriaId ');
+    Qry.SQL.Add('DELETE FROM clientes ' +
+                '   WHERE id =:clienteId ');
 
-    Qry.ParamByName('categoriaId').AsInteger := F_id;
+    Qry.ParamByName('clienteId').AsInteger := F_id;
 
     try
       ConexaoDB.StartTransaction;
       Qry.ExecSQL;
       ConexaoDB.Commit;
+      Result:=True;
     except
       ConexaoDB.Rollback;
       Result := False;
@@ -145,17 +148,31 @@ begin
     Qry := TZQuery.Create(nil);
     Qry.Connection := ConexaoDB;
     Qry.SQL.Clear;
-    Qry.SQL.Add('UPDATE categorias ' +
-                '   SET descricao =:descricao ' +
-                '   WHERE categoriaId =:categoriaId ');
+    Qry.SQL.Add('UPDATE clientes ' +
+                '   SET nome =:nome, ' +
+                '   sobrenome =:sobrenome, ' +
+                '   cpf =:cpf, ' +
+                '   endereco =:endereco, ' +
+                '   cep =:cep, ' +
+                '   telefone =:telefone, ' +
+                '   celular =:celular, ' +
+                '   data_edicao =GETDATE() ' +
+                '   WHERE id =:clienteId ');
 
-    Qry.ParamByName('categoriaId').AsInteger := Self.F_id;
-    Qry.ParamByName('descricao').AsString    := Self.F_nome;
+    Qry.ParamByName('clienteId').AsInteger := Self.F_id;
+    Qry.ParamByName('nome').AsString    := Self.F_nome;
+    Qry.ParamByName('sobrenome').AsString    := Self.F_sobrenome;
+    Qry.ParamByName('cpf').AsString    := Self.F_cpf;
+    Qry.ParamByName('endereco').AsString    := Self.F_endereco;
+    Qry.ParamByName('cep').AsString    := Self.F_cep;
+    Qry.ParamByName('telefone').AsString    := Self.F_telefone;
+    Qry.ParamByName('celular').AsString    := Self.F_celular;
 
     try
       ConexaoDB.StartTransaction;
       Qry.ExecSQL;
       ConexaoDB.Commit;
+      Result:=True;
     except
       ConexaoDB.Rollback;
       Result := False;
@@ -175,13 +192,23 @@ begin
     Qry := TZQuery.Create(nil);
     Qry.Connection := ConexaoDB;
     Qry.SQL.Clear;
-    Qry.SQL.Add('INSERT INTO categorias (descricao) values (:descricao)');
-    Qry.ParamByName('descricao').AsString := Self.F_nome;
+    Qry.SQL.Add('INSERT INTO clientes (nome,sobrenome,cpf,endereco,cep,telefone,celular,data_inclusao,data_edicao) '+
+                'values (:nome, :sobrenome, :cpf, :endereco, :cep, :telefone, :celular, GETDATE(), GETDATE())');
+
+    Qry.ParamByName('nome').AsString := Self.F_nome;
+    Qry.ParamByName('sobrenome').AsString := Self.F_sobrenome;
+    Qry.ParamByName('cpf').AsString := Self.F_cpf;
+    Qry.ParamByName('endereco').AsString := Self.F_endereco;
+    Qry.ParamByName('cep').AsString := Self.F_cep;
+    Qry.ParamByName('telefone').AsString := Self.F_telefone;
+    Qry.ParamByName('celular').AsString := Self.F_celular;
 
      try
       ConexaoDB.StartTransaction;
       Qry.ExecSQL;
       ConexaoDB.Commit;
+      Result := True;
+
     except
       ConexaoDB.Rollback;
       Result := False;
@@ -324,12 +351,12 @@ end;
 
 procedure TClientes.setTelefone(const newTelefone: string);
 begin
-   Self.F_endereco := newTelefone;
+   Self.F_telefone := newTelefone;
 end;
 
 procedure TClientes.setCelular(const newCelular: string);
 begin
-   Self.F_endereco := newCelular;
+   Self.F_celular := newCelular;
 end;
 
 procedure TClientes.setDataInclusao(const newDataInclusao: string);

@@ -24,6 +24,7 @@ type
     procedure btnFecharClick(Sender: TObject);
     procedure grdListagemDblClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
+    procedure btnDeletarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,17 +43,30 @@ procedure TfrmTelaListagemClientes.btnCadastrarClick(Sender: TObject);
 begin
   inherited;
 
-  var clienteInicial := TClientes.Create(dtmPrincipal.ConexaoDB);
-
+  var clienteInicial := TClientes.Create(dtmPrincipal.ConexaoDB, qryListagem);
   frmTelaCadastroClientes := TfrmTelaCadastroClientes.Create(Self, ecCadastrar, clienteInicial);
   frmTelaCadastroClientes.ShowModal;
   frmTelaCadastroClientes.Release;
 end;
 
+procedure TfrmTelaListagemClientes.btnDeletarClick(Sender: TObject);
+begin
+  inherited;
+  const clienteASerDeletado = TClientes.Create(dtmPrincipal.ConexaoDB, qryListagem);
+  clienteASerDeletado.Selecionar(QryListagem.FieldByName('id').AsInteger);
+  const apagarSucesso = clienteASerDeletado.Apagar();
+  if apagarSucesso then
+    ShowMessage('APAGADO com sucesso')
+  else
+    ShowMessage('Ocorreu um ERRO');
+
+  qryListagem.Refresh;
+end;
+
 procedure TfrmTelaListagemClientes.btnEditarClick(Sender: TObject);
 begin
   inherited;
-  var clienteInicial := TClientes.Create(dtmPrincipal.ConexaoDB);
+  var clienteInicial := TClientes.Create(dtmPrincipal.ConexaoDB, qryListagem);
   clienteInicial.Selecionar(QryListagem.FieldByName('id').AsInteger);
   frmTelaCadastroClientes := TfrmTelaCadastroClientes.Create(Self, ecEditar, clienteInicial);
   frmTelaCadastroClientes.ShowModal;
@@ -69,7 +83,7 @@ procedure TfrmTelaListagemClientes.grdListagemDblClick(Sender: TObject);
 begin
   inherited;
 
-  var clienteInicial := TClientes.Create(dtmPrincipal.ConexaoDB);
+  var clienteInicial := TClientes.Create(dtmPrincipal.ConexaoDB, qryListagem);
   clienteInicial.Selecionar(QryListagem.FieldByName('id').AsInteger);
   frmTelaCadastroClientes := TfrmTelaCadastroClientes.Create(Self, ecVisualizar, clienteInicial);
   frmTelaCadastroClientes.ShowModal;

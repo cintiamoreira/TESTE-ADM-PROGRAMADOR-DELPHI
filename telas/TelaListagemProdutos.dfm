@@ -54,6 +54,7 @@ inherited frmTelaListagemProdutos: TfrmTelaListagemProdutos
   inherited Panel1: TPanel
     Width = 859
     Anchors = [akRight, akBottom]
+    ExplicitWidth = 859
     inherited btnCadastrar: TBitBtn
       Left = 516
       Anchors = [akRight, akBottom]
