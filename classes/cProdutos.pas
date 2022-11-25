@@ -23,6 +23,7 @@ type
   //Variáveis Privadas somente dentro da Classe
 
     ConexaoDB : TZConnection;
+    QryListagem:  TZQuery;
     //Campos
     F_id : Integer; //Int
     F_nome : string;    //Varchar
@@ -51,7 +52,7 @@ type
   public
   //Construtor de uma Classe
 
-    constructor Create (aConexao : TZConnection);
+    constructor Create (aConexao : TZConnection; aQuery: TZQuery);
 
     destructor Destroy; override;
 
@@ -75,9 +76,10 @@ type
 implementation
 
 {$REGION 'Constructor and Destructor'}
-constructor TProdutos.Create (aConexao : TZConnection);
+constructor TProdutos.Create (aConexao : TZConnection; aQuery: TZQuery);
 begin
   ConexaoDB := aConexao;
+  QryListagem := aQuery;
 end;
 
 destructor TProdutos.Destroy;
@@ -92,7 +94,7 @@ var Qry:TZQuery;
 begin
   if MessageDlg('Apagar o Registro: '+#13+#13+
                 'Código: '+IntToStr (F_id) +#13+
-                'Descrição: '+F_nome,mtConfirmation, [mbYes, mbNo],0)=mrNo
+                'Nome: '+F_nome,mtConfirmation, [mbYes, mbNo],0)=mrNo
   then begin
       Result := false;
       Abort;
@@ -103,18 +105,20 @@ begin
     Qry := TZQuery.Create(nil);
     Qry.Connection := ConexaoDB;
     Qry.SQL.Clear;
-    Qry.SQL.Add('DELETE FROM categorias ' +
-                '   WHERE categoriaId =:categoriaId ');
+    Qry.SQL.Add('DELETE FROM produtos ' +
+                '   WHERE id =:idProduto ');
 
-    Qry.ParamByName('categoriaId').AsInteger := F_id;
+    Qry.ParamByName('idProduto').AsInteger := F_id;
 
     try
       ConexaoDB.StartTransaction;
       Qry.ExecSQL;
       ConexaoDB.Commit;
+      QryListagem.Refresh;
+      Result := True;
     except
       ConexaoDB.Rollback;
-     Result := False;
+      Result := False;
     end;
 
   finally
@@ -149,6 +153,7 @@ begin
       ConexaoDB.StartTransaction;
       Qry.ExecSQL;
       ConexaoDB.Commit;
+      QryListagem.Refresh;
       Result := True;
     except
       ConexaoDB.Rollback;
@@ -183,6 +188,7 @@ begin
       ConexaoDB.StartTransaction;
       Qry.ExecSQL;
       ConexaoDB.Commit;
+      QryListagem.Refresh;
       Result := True;
     except
       ConexaoDB.Rollback;

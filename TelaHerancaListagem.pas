@@ -19,6 +19,7 @@ type
     dtsListagem: TDataSource;
     qryListagem: TZQuery;
     procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,6 +39,12 @@ begin
     dtsListagem.DataSet := qryListagem;
     grdListagem.DataSource := dtsListagem;
 end;
+
+procedure TfrmTelaHerancaListagem.FormShow(Sender: TObject);
+begin
+  qryListagem.Refresh;
+end;
+
 
 
 end.

@@ -1,5 +1,7 @@
 inherited frmTelaListagemProdutos: TfrmTelaListagemProdutos
   Caption = 'Listagem de Produtos'
+  OnActivate = FormActivate
+  OnShow = nil
   PixelsPerInch = 96
   TextHeight = 13
   inherited grdListagem: TDBGrid
@@ -52,6 +54,9 @@ inherited frmTelaListagemProdutos: TfrmTelaListagemProdutos
     end
     inherited btnEditar: TBitBtn
       OnClick = btnEditarClick
+    end
+    inherited btnDeletar: TBitBtn
+      OnClick = btnDeletarClick
     end
     inherited btnFechar: TBitBtn
       OnClick = btnFecharClick
