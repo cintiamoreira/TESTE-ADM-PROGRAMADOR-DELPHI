@@ -25,10 +25,10 @@ type
     Edit3: TEdit;
     Label3: TLabel;
     MaskEdit1: TMaskEdit;
-    DateEdit1: TDateEdit;
+    deInclusao: TDateEdit;
     DateEdit2: TDateEdit;
     DateEdit3: TDateEdit;
-    DateEdit4: TDateEdit;
+    deEdicao: TDateEdit;
     procedure btnSairClick(Sender: TObject);
   private
     { Private declarations }

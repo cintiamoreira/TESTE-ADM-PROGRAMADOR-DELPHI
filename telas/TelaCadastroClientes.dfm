@@ -3,8 +3,8 @@ inherited frmTelaCadastroClientes: TfrmTelaCadastroClientes
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    ExplicitLeft = -64
-    ExplicitTop = 8
+    ExplicitLeft = 0
+    ExplicitTop = 0
     ExplicitHeight = 472
     object lblNome: TLabel
       Left = 40
@@ -51,8 +51,8 @@ inherited frmTelaCadastroClientes: TfrmTelaCadastroClientes
     object Label1: TLabel
       Left = 451
       Top = 48
-      Width = 60
-      Height = 22
+      Width = 54
+      Height = 13
       Caption = 'Sobrenome'
     end
     object Label2: TLabel
@@ -125,7 +125,7 @@ inherited frmTelaCadastroClientes: TfrmTelaCadastroClientes
       TabOrder = 3
       Text = '  .   .   '
     end
-    object DateEdit1: TDateEdit
+    object deInclusao: TDateEdit
       Left = 144
       Top = 262
       Width = 121
@@ -133,7 +133,7 @@ inherited frmTelaCadastroClientes: TfrmTelaCadastroClientes
       NumGlyphs = 2
       TabOrder = 7
     end
-    object DateEdit4: TDateEdit
+    object deEdicao: TDateEdit
       Left = 144
       Top = 304
       Width = 121

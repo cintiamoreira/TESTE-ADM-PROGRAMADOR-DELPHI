@@ -1,5 +1,0 @@
-inherited frmTelaListagemProdutos: TfrmTelaListagemProdutos
-  Caption = 'Listagem de Produtos'
-  PixelsPerInch = 96
-  TextHeight = 13
-end

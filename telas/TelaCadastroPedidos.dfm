@@ -4,6 +4,7 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
   TextHeight = 13
   inherited Panel1: TPanel
     ExplicitLeft = 0
+    ExplicitTop = 0
     ExplicitHeight = 472
     object lblNome: TLabel
       Left = 40
@@ -26,9 +27,9 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
       Height = 13
       Caption = 'Quantidade Total'
     end
-    object lblDataInclusao: TLabel
-      Left = 39
-      Top = 217
+    object lblValorTotalDesconto: TLabel
+      Left = 296
+      Top = 163
       Width = 99
       Height = 13
       Caption = 'Valor Total Desconto'
@@ -40,21 +41,21 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
       Height = 13
       Caption = 'Valor Total'
     end
-    object lblDataEdicao: TLabel
+    object lblDataInclusao: TLabel
       Left = 40
-      Top = 259
+      Top = 267
       Width = 81
       Height = 13
       Caption = 'Data de Inclus'#227'o'
     end
-    object Label1: TLabel
+    object lblDataEdicao: TLabel
       Left = 40
       Top = 315
       Width = 72
       Height = 13
       Caption = 'Data de Edi'#231#227'o'
     end
-    object edtNome: TEdit
+    object edtCodigoProduto: TEdit
       Left = 154
       Top = 45
       Width = 321
@@ -62,15 +63,15 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
       NumbersOnly = True
       TabOrder = 0
     end
-    object edtValor: TEdit
-      Left = 144
+    object edtCodigoCliente: TEdit
+      Left = 153
       Top = 103
       Width = 121
       Height = 21
       NumbersOnly = True
       TabOrder = 1
     end
-    object edtQuantidade: TEdit
+    object edtQuantidadeTotal: TEdit
       Left = 400
       Top = 98
       Width = 121
@@ -78,34 +79,36 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
       NumbersOnly = True
       TabOrder = 2
     end
-    object edtDataInclusao: TEdit
-      Left = 154
-      Top = 214
-      Width = 121
-      Height = 21
-      NumbersOnly = True
-      TabOrder = 3
-    end
-    object edtDescontoPromocional: TEdit
-      Left = 154
-      Top = 163
+    object edtValorTotalDesconto: TEdit
+      Left = 404
+      Top = 160
       Width = 121
       Height = 21
       NumbersOnly = True
       TabOrder = 4
     end
-    object edtDataEdicao: TEdit
+    object edtValorTotal: TEdit
       Left = 154
-      Top = 256
+      Top = 160
       Width = 121
       Height = 21
+      NumbersOnly = True
+      TabOrder = 3
+    end
+    object dtInclusao: TDateEdit
+      Left = 154
+      Top = 264
+      Width = 121
+      Height = 21
+      NumGlyphs = 2
       TabOrder = 5
     end
-    object Edit1: TEdit
+    object deEdicao: TDateEdit
       Left = 154
       Top = 312
       Width = 121
       Height = 21
+      NumGlyphs = 2
       TabOrder = 6
     end
   end

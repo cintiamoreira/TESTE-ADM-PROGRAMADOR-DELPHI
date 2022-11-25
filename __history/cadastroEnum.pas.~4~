@@ -1,0 +1,8 @@
+unit cadastroEnum;
+
+interface
+       Type
+       TEstadoCadastro = (visualizar, cadastrar, editar);
+implementation
+
+end.

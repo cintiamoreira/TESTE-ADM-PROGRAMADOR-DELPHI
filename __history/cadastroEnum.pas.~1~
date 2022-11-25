@@ -1,0 +1,8 @@
+unit enum;
+
+interface
+       Type
+       TEstadoCadastro = (visualizar, inserir);
+implementation
+
+end.

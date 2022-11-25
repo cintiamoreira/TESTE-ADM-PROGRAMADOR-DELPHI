@@ -18,7 +18,7 @@ uses
   cProdutos in 'classes\cProdutos.pas',
   cClientes in 'classes\cClientes.pas',
   cPedidos in 'classes\cPedidos.pas',
-  API_CEP in 'API_CEP.pas' {Form1};
+  cadastroEnum in 'cadastroEnum.pas';
 
 {$R *.res}
 
@@ -26,6 +26,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.

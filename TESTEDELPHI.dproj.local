@@ -6,11 +6,11 @@
     <Transaction>2022/11/24 11:19:14.000.769,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TESTE.dfm=C:\Users\cinti\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>2022/11/24 11:19:14.000.769,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TESTE.pas=C:\Users\cinti\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2022/11/24 11:20:14.000.537,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TESTEDELPHI.dproj=C:\Users\cinti\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2022/11/24 11:33:26.000.676,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\MenuPrincipal.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TESTE.pas</Transaction>
     <Transaction>2022/11/24 11:33:26.000.676,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\MenuPrincipal.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TESTE.dfm</Transaction>
+    <Transaction>2022/11/24 11:33:26.000.676,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\MenuPrincipal.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TESTE.pas</Transaction>
     <Transaction>2022/11/24 11:53:10.000.235,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
-    <Transaction>2022/11/24 11:54:43.000.820,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\datamodule\uDTMConexao.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
     <Transaction>2022/11/24 11:54:43.000.820,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\datamodule\uDTMConexao.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.dfm</Transaction>
+    <Transaction>2022/11/24 11:54:43.000.820,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\datamodule\uDTMConexao.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
     <Transaction>2022/11/24 12:19:58.000.836,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
     <Transaction>2022/11/24 12:23:12.000.716,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\configuracao.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
     <Transaction>2022/11/24 12:23:12.000.716,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\configuracao.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.dfm</Transaction>
@@ -20,19 +20,19 @@
     <Transaction>2022/11/24 12:40:19.000.278,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaCadastrosProdutos.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.dfm</Transaction>
     <Transaction>2022/11/24 12:40:19.000.278,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaCadastrosProdutos.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
     <Transaction>2022/11/24 13:07:16.000.175,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
-    <Transaction>2022/11/24 13:07:34.000.061,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHerancaCadastro.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaCadastrosProdutos.dfm</Transaction>
     <Transaction>2022/11/24 13:07:34.000.061,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHerancaCadastro.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaCadastrosProdutos.pas</Transaction>
+    <Transaction>2022/11/24 13:07:34.000.061,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHerancaCadastro.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaCadastrosProdutos.dfm</Transaction>
     <Transaction>2022/11/24 13:10:09.000.442,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHerancaCadastros.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHerancaCadastro.pas</Transaction>
     <Transaction>2022/11/24 13:10:09.000.442,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHerancaCadastros.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHerancaCadastro.dfm</Transaction>
     <Transaction>2022/11/24 13:10:29.000.753,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
-    <Transaction>2022/11/24 13:10:54.000.345,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaCadastrosProdutos.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.dfm</Transaction>
     <Transaction>2022/11/24 13:10:54.000.345,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaCadastrosProdutos.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
+    <Transaction>2022/11/24 13:10:54.000.345,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaCadastrosProdutos.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.dfm</Transaction>
     <Transaction>2022/11/24 13:11:07.000.498,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHeranca.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHerancaCadastros.pas</Transaction>
     <Transaction>2022/11/24 13:11:07.000.498,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHeranca.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHerancaCadastros.dfm</Transaction>
     <Transaction>2022/11/24 13:37:16.000.156,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHeranca.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHerancaListagem.dfm</Transaction>
     <Transaction>2022/11/24 13:37:16.000.156,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHeranca.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHerancaListagem.pas</Transaction>
-    <Transaction>2022/11/24 13:38:19.000.276,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaCadastrosProdutos.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaListagemProdutos.pas</Transaction>
     <Transaction>2022/11/24 13:38:19.000.276,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaCadastrosProdutos.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaListagemProdutos.dfm</Transaction>
+    <Transaction>2022/11/24 13:38:19.000.276,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaCadastrosProdutos.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaListagemProdutos.pas</Transaction>
     <Transaction>2022/11/24 13:38:46.000.396,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaListagemProdutos.pas=</Transaction>
     <Transaction>2022/11/24 13:43:01.000.856,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
     <Transaction>2022/11/24 13:44:17.000.852,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
@@ -44,8 +44,8 @@
     <Transaction>2022/11/24 14:11:17.000.164,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\telas\TelaListagemProdutos.dfm</Transaction>
     <Transaction>2022/11/24 14:11:17.000.164,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\telas\TelaListagemProdutos.pas</Transaction>
     <Transaction>2022/11/24 14:11:36.000.627,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
-    <Transaction>2022/11/24 14:16:54.000.065,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHerancaCadastro.pas</Transaction>
     <Transaction>2022/11/24 14:16:54.000.065,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHerancaCadastro.dfm</Transaction>
+    <Transaction>2022/11/24 14:16:54.000.065,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\TelaHerancaCadastro.pas</Transaction>
     <Transaction>2022/11/24 15:21:20.000.437,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
     <Transaction>2022/11/24 15:21:31.000.252,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\telas\TelaCadastroProdutos.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.dfm</Transaction>
     <Transaction>2022/11/24 15:21:31.000.252,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\telas\TelaCadastroProdutos.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
@@ -63,13 +63,16 @@
     <Transaction>2022/11/24 16:34:21.000.335,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\telas\TelaListagemClientes.dfm</Transaction>
     <Transaction>2022/11/24 18:34:15.000.444,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
     <Transaction>2022/11/24 18:34:48.000.208,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\classes\cProdutos.pas</Transaction>
-    <Transaction>2022/11/24 19:33:32.923,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
-    <Transaction>2022/11/24 19:34:16.634,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\classes\cClientes.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
-    <Transaction>2022/11/24 19:35:12.389,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
-    <Transaction>2022/11/24 19:35:23.196,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\classes\cPedidos.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
-    <Transaction>2022/11/24 19:55:57.897,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
-    <Transaction>2022/11/24 19:56:30.494,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\API_CEP.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
-    <Transaction>2022/11/24 19:56:30.494,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\API_CEP.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.dfm</Transaction>
+    <Transaction>2022/11/24 19:33:32.000.923,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
+    <Transaction>2022/11/24 19:34:16.000.634,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\classes\cClientes.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
+    <Transaction>2022/11/24 19:35:12.000.389,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
+    <Transaction>2022/11/24 19:35:23.000.196,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\classes\cPedidos.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
+    <Transaction>2022/11/24 19:55:57.000.897,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
+    <Transaction>2022/11/24 19:56:30.000.494,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\API_CEP.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
+    <Transaction>2022/11/24 19:56:30.000.494,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\API_CEP.dfm=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.dfm</Transaction>
+    <Transaction>2022/11/25 09:47:20.000.840,=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas</Transaction>
+    <Transaction>2022/11/25 09:48:52.000.698,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\Unit1.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\enum.pas</Transaction>
+    <Transaction>2022/11/25 09:49:30.000.308,C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\enum.pas=C:\Users\cinti\Desktop\Projetos Delphi\TESTE-ADM-PROGRAMADOR-DELPHI\cadastroEnum.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="classes"/>
@@ -100,7 +103,6 @@
     <File Path="TelaHerancaCadastro.dfm"/>
     <File Path="TelaHerancaListagem.pas"/>
     <File Path="TelaHerancaListagem.dfm"/>
-    <File Path="API_CEP.pas"/>
-    <File Path="API_CEP.dfm"/>
+    <File Path="cadastroEnum.pas"/>
   </ProjectSortOrder>
 </BorlandProject>

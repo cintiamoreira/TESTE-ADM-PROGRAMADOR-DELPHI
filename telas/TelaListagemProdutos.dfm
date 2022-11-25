@@ -4,7 +4,7 @@ inherited frmTelaListagemProdutos: TfrmTelaListagemProdutos
   TextHeight = 13
   inherited grdListagem: TDBGrid
     DataSource = dtsListagem
-    Enabled = False
+    OnDblClick = grdListagemDblClick
     Columns = <
       item
         Expanded = False
@@ -47,7 +47,6 @@ inherited frmTelaListagemProdutos: TfrmTelaListagemProdutos
       end>
   end
   inherited Panel1: TPanel
-    ExplicitTop = 462
     inherited btnCadastrar: TBitBtn
       OnClick = btnCadastrarClick
     end
