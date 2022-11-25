@@ -131,20 +131,28 @@ begin
     Qry := TZQuery.Create(nil);
     Qry.Connection := ConexaoDB;
     Qry.SQL.Clear;
-    Qry.SQL.Add('UPDATE categorias ' +
-                '   SET descricao =:descricao ' +
-                '   WHERE categoriaId =:categoriaId ');
+    Qry.SQL.Add('UPDATE produtos ' +
+                '   SET nome =:nome, ' +
+                '   valor =:valor, ' +
+                '   quantidade =:quantidade, ' +
+                '   desconto_promocional =:descontoPromocional, ' +
+                '   data_edicao = GETDATE() ' +
+                '   WHERE id = :idProduto ');
 
-    Qry.ParamByName('categoriaId').AsInteger := Self.F_id;
-    Qry.ParamByName('descricao').AsString    := Self.F_nome;
+    Qry.ParamByName('idProduto').AsInteger := Self.F_id;
+    Qry.ParamByName('nome').AsString    := Self.F_nome;
+    Qry.ParamByName('valor').AsString    := FloatToStr(Self.F_valor);
+    Qry.ParamByName('quantidade').AsString    := IntToStr(Self.F_quantidade);
+    Qry.ParamByName('descontoPromocional').AsString    := IntToStr(Self.F_desconto_promocional);
 
     try
       ConexaoDB.StartTransaction;
       Qry.ExecSQL;
       ConexaoDB.Commit;
+      Result := True;
     except
       ConexaoDB.Rollback;
-     Result := False;
+      Result := False;
     end;
 
   finally

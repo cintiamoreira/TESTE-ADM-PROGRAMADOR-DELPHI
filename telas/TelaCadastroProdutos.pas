@@ -84,11 +84,24 @@ begin
       const inserirSucesso = oProduto.Inserir();
       if inserirSucesso then
          ShowMessage('Inserido com sucesso')
-         else
+      else
          ShowMessage('Ocorreu um erro');
       Close;
     end
-    else if EstadoCadastro = cadastroEnum.ecEditar then oProduto.Atualizar()
+    else if EstadoCadastro = cadastroEnum.ecEditar then begin
+      oProduto.nome := edtNome.Text;
+      oProduto.valor := StrToFloat(edtValor.Text);
+      oProduto.quantidade := StrToInt(edtQuantidade.Text);
+      oProduto.descontoPromocional := StrToInt(edtDescontoPromocional.Text);
+
+      const atualizarSucesso = oProduto.Atualizar();
+      if atualizarSucesso then
+         ShowMessage('Atualizado com sucesso')
+      else
+         ShowMessage('Ocorreu um erro');
+      Close;
+
+    end
     else if EstadoCadastro = cadastroEnum.ecVisualizar then Close
 end;
 
@@ -109,6 +122,9 @@ end;
 
 procedure TfrmTelaCadastroProdutos.PrepararModoCadastro();
 begin
+    EstadoCadastro := ecCadastrar;
+    frmTelaCadastroProdutos.Caption := 'Cadastrando novo Produto';
+
     deInclusao.Visible := false;
     deEdicao.Visible := false;
     lblDataEdicao.Visible := false;
@@ -118,6 +134,9 @@ end;
 
 procedure TfrmTelaCadastroProdutos.PrepararModoEdicao();
 begin
+
+    EstadoCadastro := ecEditar;
+    frmTelaCadastroProdutos.Caption := 'Editando Produto';
     edtNome.Enabled:= true;
     edtValor.Enabled:= true;
     edtQuantidade.Enabled:= true;
@@ -137,6 +156,8 @@ end;
 procedure TfrmTelaCadastroProdutos.PrepararModoVisualizacao();
 begin
     //desabilitar todos os inputs pro ser modo visualizacao
+    EstadoCadastro := ecVisualizar;
+    frmTelaCadastroProdutos.Caption := 'Visualizando Produto';
     edtNome.Enabled:= false;
     edtValor.Enabled:= false;
     edtQuantidade.Enabled:= false;
