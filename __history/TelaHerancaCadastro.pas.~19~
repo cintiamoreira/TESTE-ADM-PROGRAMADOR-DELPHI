@@ -1,0 +1,57 @@
+unit TelaHerancaCadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, cadastroEnum;
+
+type
+  TfrmTelaHerancaCadastro = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    btnOK: TBitBtn;
+    btnCancelar: TBitBtn;
+    btnEditar: TBitBtn;
+    btnSair: TBitBtn;
+  private
+    EstadoCadastro: TEstadoCadastro;
+    procedure setEstadoCadastro(const newEstadoCadastro: TEstadoCadastro);
+    function getEstadoCadastro: TEstadoCadastro;
+    { Private declarations }
+  public
+    constructor Create (AOwner: TComponent; const estadoInicial: TEstadoCadastro);
+    { Public declarations }
+  published
+
+    property estado : TEstadoCadastro  read getEstadoCadastro  write setEstadoCadastro;
+  end;
+
+
+
+var
+  frmTelaHerancaCadastro: TfrmTelaHerancaCadastro;
+
+implementation
+
+{$R *.dfm}
+
+{ TfrmTelaHerancaCadastro }
+ constructor TfrmTelaCadastroProdutos.Create(AOwner: TComponent; const estadoInicial: TEstadoCadastro);
+begin
+  inherited Create(AOwner);
+  EstadoCadastro := estadoInicial;
+end;
+
+function TfrmTelaHerancaCadastro.getEstadoCadastro: TEstadoCadastro;
+begin
+   Result := Self.EstadoCadastro;
+end;
+
+procedure TfrmTelaHerancaCadastro.setEstadoCadastro(
+  const newEstadoCadastro: TEstadoCadastro);
+begin
+    Self.EstadoCadastro := newEstadoCadastro;
+end;
+
+end.

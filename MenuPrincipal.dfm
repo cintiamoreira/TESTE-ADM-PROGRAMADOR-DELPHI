@@ -2,12 +2,12 @@ object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
   Caption = 'Menu Principal'
-  ClientHeight = 635
+  ClientHeight = 535
   ClientWidth = 794
-  Color = clBtnFace
+  Color = 14739951
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -16
   Font.Name = 'Tahoma'
   Font.Style = []
   Menu = mainPrincipal
@@ -15,7 +15,7 @@ object frmPrincipal: TfrmPrincipal
   WindowState = wsMaximized
   OnCreate = FormCreate
   PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 19
   object mainPrincipal: TMainMenu
     Left = 720
     Top = 48

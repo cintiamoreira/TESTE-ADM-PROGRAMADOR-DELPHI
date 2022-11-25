@@ -3,9 +3,10 @@ unit TelaCadastroProdutos;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, TelaHerancaCadastro, Vcl.StdCtrls,
-  Vcl.Buttons, Vcl.ExtCtrls, Vcl.Mask, Vcl.ComCtrls, RxToolEdit, cadastroEnum, cProdutos;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  TelaHerancaCadastro, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Mask,
+  Vcl.ComCtrls, RxToolEdit, cadastroEnum, cProdutos;
 
 type
     TfrmTelaCadastroProdutos = class(TfrmTelaHerancaCadastro)
@@ -29,6 +30,7 @@ type
     procedure btnEditarClick(Sender: TObject);
     procedure btnOKClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+
   private
     { Private declarations }
 
@@ -38,6 +40,7 @@ type
     function getEstadoCadastro: TEstadoCadastro;
     procedure setProduto(const newProduto: TProdutos);
     function getProduto: TProdutos;
+
   public
     constructor Create (AOwner: TComponent; const estadoInicial: TEstadoCadastro; const produtoInicial: TProdutos);
     { Public declarations }
@@ -83,9 +86,9 @@ begin
 
       const inserirSucesso = oProduto.Inserir();
       if inserirSucesso then
-         ShowMessage('Inserido com sucesso')
+         ShowMessage('INSERIDO com sucesso')
       else
-         ShowMessage('Ocorreu um erro');
+         ShowMessage('Ocorreu um ERRO');
       Close;
     end
     else if EstadoCadastro = cadastroEnum.ecEditar then begin
@@ -96,9 +99,9 @@ begin
 
       const atualizarSucesso = oProduto.Atualizar();
       if atualizarSucesso then
-         ShowMessage('Atualizado com sucesso')
+         ShowMessage('ATUALIZADO com sucesso')
       else
-         ShowMessage('Ocorreu um erro');
+         ShowMessage('Ocorreu um ERRO');
       Close;
 
     end

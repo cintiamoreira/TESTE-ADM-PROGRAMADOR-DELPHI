@@ -68,7 +68,7 @@ type
     function Inserir : Boolean;
     function Atualizar : Boolean;
     function Apagar : Boolean;
-    function Selecionar (id : Integer) : Boolean;
+    function Selecionar(id: Integer)  : Boolean;
 
   published
 
@@ -128,7 +128,7 @@ begin
       ConexaoDB.Commit;
     except
       ConexaoDB.Rollback;
-     Result := False;
+      Result := False;
     end;
 
   finally
@@ -158,7 +158,7 @@ begin
       ConexaoDB.Commit;
     except
       ConexaoDB.Rollback;
-     Result := False;
+      Result := False;
     end;
 
   finally
@@ -184,7 +184,7 @@ begin
       ConexaoDB.Commit;
     except
       ConexaoDB.Rollback;
-     Result := False;
+      Result := False;
     end;
 
   finally
@@ -202,17 +202,28 @@ begin
       Qry.Connection := ConexaoDB;
       Qry.SQL.Clear;
 
-      Qry.SQL.Add ('SELECT categoriaId, descricao ' +
-                  'FROM categorias ' +
-                  'WHERE categoriaId=:categoriaId');
+      Qry.SQL.Add ('SELECT * ' +
+                  'FROM clientes ' +
+                  'WHERE id = :clienteId');
 
-      Qry.ParamByName('categoriaId').AsInteger := id;
+      Qry.ParamByName('clienteId').AsInteger := id;
 
       try
         Qry.Open;
 
-        Self.F_id := Qry.FieldByName('categoriaId').AsInteger;
-        Self.F_nome   := Qry.FieldByName('descricao').AsString;
+        Self.F_id := Qry.FieldByName('id').AsInteger;
+        Self.F_nome   := Qry.FieldByName('nome').AsString;
+        Self.F_sobrenome   := Qry.FieldByName('sobrenome').AsString;
+        Self.F_cpf   := Qry.FieldByName('cpf').AsString;
+        Self.F_endereco   := Qry.FieldByName('endereco').AsString;
+        Self.F_cep   := Qry.FieldByName('cep').AsString;
+        Self.F_telefone   := Qry.FieldByName('telefone').AsString;
+        Self.F_celular   := Qry.FieldByName('celular').AsString;
+        Self.F_data_inclusao   := Qry.FieldByName('data_inclusao').AsString;
+        Self.F_data_edicao   := Qry.FieldByName('data_edicao').AsString;
+
+        Result := true;
+
       except
          Result := False;
       end;

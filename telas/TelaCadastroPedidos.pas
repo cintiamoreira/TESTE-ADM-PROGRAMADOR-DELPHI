@@ -21,8 +21,8 @@ type
     edtValorTotal: TEdit;
     lblDataInclusao: TLabel;
     lblDataEdicao: TLabel;
-    dtInclusao: TDateEdit;
-    deEdicao: TDateEdit;
+    edtDataInclusao: TEdit;
+    edtDataEdicao: TEdit;
     procedure btnSairClick(Sender: TObject);
   private
     { Private declarations }

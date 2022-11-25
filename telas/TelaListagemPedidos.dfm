@@ -1,13 +1,13 @@
 inherited frmTelaListagemPedidos: TfrmTelaListagemPedidos
   Caption = 'Listagem de Pedidos'
   ClientHeight = 548
-  ClientWidth = 917
-  ExplicitWidth = 933
+  ClientWidth = 697
+  ExplicitWidth = 713
   ExplicitHeight = 587
   PixelsPerInch = 96
   TextHeight = 13
   inherited grdListagem: TDBGrid
-    Width = 917
+    Width = 697
     Height = 507
     DataSource = dtsListagem
     Columns = <
@@ -54,41 +54,69 @@ inherited frmTelaListagemPedidos: TfrmTelaListagemPedidos
   end
   inherited Panel1: TPanel
     Top = 507
-    Width = 917
+    Width = 697
+    ExplicitTop = 507
+    ExplicitWidth = 917
     inherited btnCadastrar: TBitBtn
+      Left = 358
+      Anchors = [akRight, akBottom]
       OnClick = btnCadastrarClick
     end
+    inherited btnEditar: TBitBtn
+      Left = 439
+      Anchors = [akRight, akBottom]
+    end
+    inherited btnDeletar: TBitBtn
+      Left = 520
+      Anchors = [akRight, akBottom]
+    end
     inherited btnFechar: TBitBtn
+      Left = 601
+      Anchors = [akRight, akBottom]
       OnClick = btnFecharClick
     end
+  end
+  inherited dtsListagem: TDataSource
+    Left = 544
+    Top = 86
   end
   inherited qryListagem: TZQuery
     Active = True
     SQL.Strings = (
       'select * from pedidos')
+    Left = 432
+    Top = 78
     object qryListagemid: TIntegerField
+      DisplayLabel = 'ID'
       FieldName = 'id'
       ReadOnly = True
     end
     object qryListagemid_produto: TIntegerField
+      DisplayLabel = 'ID Produto'
       FieldName = 'id_produto'
     end
     object qryListagemid_cliente: TIntegerField
+      DisplayLabel = 'ID Cliente'
       FieldName = 'id_cliente'
     end
     object qryListagemqtd_total: TIntegerField
+      DisplayLabel = 'Quantidade Total'
       FieldName = 'qtd_total'
     end
     object qryListagemvalor_total: TFloatField
+      DisplayLabel = 'Valor Total'
       FieldName = 'valor_total'
     end
     object qryListagemvalor_total_desconto: TFloatField
+      DisplayLabel = 'Valor Total Desconto'
       FieldName = 'valor_total_desconto'
     end
     object qryListagemdata_inclusao: TDateTimeField
+      DisplayLabel = 'Data de Inclus'#227'o'
       FieldName = 'data_inclusao'
     end
     object qryListagemdata_edicao: TDateTimeField
+      DisplayLabel = 'Data de Edi'#231#227'o'
       FieldName = 'data_edicao'
     end
   end

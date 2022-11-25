@@ -1,15 +1,16 @@
 inherited frmTelaListagemClientes: TfrmTelaListagemClientes
   Caption = 'Listagem de Clientes'
   ClientHeight = 600
-  ClientWidth = 1104
-  ExplicitWidth = 1120
+  ClientWidth = 917
+  ExplicitWidth = 933
   ExplicitHeight = 639
   PixelsPerInch = 96
   TextHeight = 13
   inherited grdListagem: TDBGrid
-    Width = 1104
+    Width = 917
     Height = 559
     DataSource = dtsListagem
+    OnDblClick = grdListagemDblClick
     Columns = <
       item
         Expanded = False
@@ -73,9 +74,14 @@ inherited frmTelaListagemClientes: TfrmTelaListagemClientes
   end
   inherited Panel1: TPanel
     Top = 559
-    Width = 1104
+    Width = 917
+    ExplicitTop = 559
+    ExplicitWidth = 1104
     inherited btnCadastrar: TBitBtn
       OnClick = btnCadastrarClick
+    end
+    inherited btnEditar: TBitBtn
+      OnClick = btnEditarClick
     end
     inherited btnFechar: TBitBtn
       OnClick = btnFecharClick
@@ -86,39 +92,49 @@ inherited frmTelaListagemClientes: TfrmTelaListagemClientes
     SQL.Strings = (
       'select * from clientes')
     object qryListagemid: TIntegerField
+      DisplayLabel = 'ID'
       FieldName = 'id'
       ReadOnly = True
     end
     object qryListagemnome: TWideStringField
+      DisplayLabel = 'Nome'
       FieldName = 'nome'
     end
     object qryListagemsobrenome: TWideStringField
+      DisplayLabel = 'Sobrenome'
       FieldName = 'sobrenome'
     end
     object qryListagemcpf: TWideStringField
+      DisplayLabel = 'CPF'
       FieldName = 'cpf'
       Size = 11
     end
     object qryListagemendereco: TWideStringField
+      DisplayLabel = 'Endere'#231'o'
       FieldName = 'endereco'
       Size = 50
     end
     object qryListagemcep: TWideStringField
+      DisplayLabel = 'CEP'
       FieldName = 'cep'
       Size = 8
     end
     object qryListagemtelefone: TWideStringField
+      DisplayLabel = 'Telefone'
       FieldName = 'telefone'
       Size = 11
     end
     object qryListagemcelular: TWideStringField
+      DisplayLabel = 'Celular'
       FieldName = 'celular'
       Size = 11
     end
     object qryListagemdata_inclusao: TDateTimeField
+      DisplayLabel = 'Data de Inclus'#227'o'
       FieldName = 'data_inclusao'
     end
     object qryListagemdata_edicao: TDateTimeField
+      DisplayLabel = 'Data de Edi'#231#227'o'
       FieldName = 'data_edicao'
     end
   end

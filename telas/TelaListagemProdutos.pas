@@ -52,9 +52,9 @@ begin
   produtoASerDeletado.Selecionar(QryListagem.FieldByName('id').AsInteger);
   const apagarSucesso = produtoASerDeletado.Apagar();
   if apagarSucesso then
-    ShowMessage('Apagado com sucesso')
+    ShowMessage('APAGADO com sucesso')
   else
-    ShowMessage('Ocorreu um erro');
+    ShowMessage('Ocorreu um ERRO');
 end;
 
 procedure TfrmTelaListagemProdutos.btnEditarClick(Sender: TObject);
