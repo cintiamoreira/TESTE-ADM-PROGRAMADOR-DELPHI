@@ -15,7 +15,10 @@ uses
   TelaCadastroClientes in 'telas\TelaCadastroClientes.pas' {frmTelaCadastroClientes},
   TelaListagemPedidos in 'telas\TelaListagemPedidos.pas' {frmTelaListagemPedidos},
   TelaListagemClientes in 'telas\TelaListagemClientes.pas' {frmTelaListagemClientes},
-  cProdutos in 'classes\cProdutos.pas';
+  cProdutos in 'classes\cProdutos.pas',
+  cClientes in 'classes\cClientes.pas',
+  cPedidos in 'classes\cPedidos.pas',
+  API_CEP in 'API_CEP.pas' {Form1};
 
 {$R *.res}
 
@@ -23,5 +26,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.

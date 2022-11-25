@@ -146,6 +146,12 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="classes\cProdutos.pas"/>
+        <DCCReference Include="classes\cClientes.pas"/>
+        <DCCReference Include="classes\cPedidos.pas"/>
+        <DCCReference Include="API_CEP.pas">
+            <Form>Form1</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
