@@ -98,6 +98,10 @@ inherited frmTelaCadastroProdutos: TfrmTelaCadastroProdutos
     end
   end
   inherited Panel2: TPanel
+    inherited btnEditar: TBitBtn
+      Enabled = True
+      OnClick = btnEditarClick
+    end
     inherited btnSair: TBitBtn
       OnClick = btnSairClick
     end

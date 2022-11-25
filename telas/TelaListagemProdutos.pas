@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, TelaHerancaListagem, Data.DB,
   ZAbstractRODataset, ZAbstractDataset, ZDataset, Vcl.StdCtrls, Vcl.Buttons,
-  Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids, TelaCadastroProdutos, uDTMConexao, cadastroEnum;
+  Vcl.ExtCtrls, Vcl.Grids, Vcl.DBGrids, TelaCadastroProdutos, uDTMConexao, cadastroEnum, cProdutos;
 
 type
   TfrmTelaListagemProdutos = class(TfrmTelaHerancaListagem)
@@ -22,7 +22,7 @@ type
     procedure grdListagemDblClick(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
   private
-  procedure AbrirTelaCadastro(estadoInicial: TEstadoCadastro);
+  procedure AbrirTelaCadastro(estadoInicial: TEstadoCadastro; produtoInicial: TProdutos);
     { Private declarations }
   public
     { Public declarations }
@@ -37,7 +37,8 @@ implementation
 procedure TfrmTelaListagemProdutos.btnCadastrarClick(Sender: TObject);
 begin
   inherited;
-  AbrirTelaCadastro(ecCadastrar);
+  const produtoInicial = TProdutos.Create(dtmPrincipal.ConexaoDB);
+  AbrirTelaCadastro(ecCadastrar, produtoInicial);
 end;
 
 procedure TfrmTelaListagemProdutos.btnFecharClick(Sender: TObject);
@@ -56,13 +57,16 @@ end;
 procedure TfrmTelaListagemProdutos.grdListagemDblClick(Sender: TObject);
 begin
   inherited;
-  AbrirTelaCadastro(ecEditar);
+
+  const produtoInicial = TProdutos.Create(dtmPrincipal.ConexaoDB);
+  produtoInicial.Selecionar(QryListagem.FieldByName('id').AsInteger);
+  AbrirTelaCadastro(ecVisualizar,produtoInicial);
 end;
 
-procedure TfrmTelaListagemProdutos.AbrirTelaCadastro(estadoInicial: TEstadoCadastro);
+procedure TfrmTelaListagemProdutos.AbrirTelaCadastro(estadoInicial: TEstadoCadastro; produtoInicial: TProdutos);
 begin
   inherited;
-  frmTelaCadastroProdutos := TfrmTelaCadastroProdutos.Create(Self, estadoInicial);
+  frmTelaCadastroProdutos := TfrmTelaCadastroProdutos.Create(Self, estadoInicial, produtoInicial);
   frmTelaCadastroProdutos.ShowModal;
   frmTelaCadastroProdutos.Release;
 end;

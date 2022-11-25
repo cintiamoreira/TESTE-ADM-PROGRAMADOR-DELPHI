@@ -188,17 +188,22 @@ begin
       Qry.Connection := ConexaoDB;
       Qry.SQL.Clear;
 
-      Qry.SQL.Add ('SELECT categoriaId, descricao ' +
-                  'FROM categorias ' +
-                  'WHERE categoriaId=:categoriaId');
+      Qry.SQL.Add ('SELECT * ' +
+                  'FROM produtos ' +
+                  'WHERE id=:idProduto');
 
-      Qry.ParamByName('categoriaId').AsInteger := id;
+      Qry.ParamByName('idProduto').AsInteger := id;
 
       try
         Qry.Open;
 
-        Self.F_id := Qry.FieldByName('categoriaId').AsInteger;
-        Self.F_nome   := Qry.FieldByName('descricao').AsString;
+        Self.F_id := Qry.FieldByName('id').AsInteger;
+        Self.F_nome   := Qry.FieldByName('nome').AsString;
+        Self.F_valor := Qry.FieldByName('valor').AsFloat;
+        Self.F_quantidade := Qry.FieldByName('quantidade').AsInteger;
+        Self.F_desconto_promocional := Qry.FieldByName('desconto_promocional').AsInteger;
+        Self.F_data_inclusao := Qry.FieldByName('data_inclusao').AsString;
+        Self.F_data_edicao := Qry.FieldByName('data_edicao').AsString;
       except
          Result := False;
       end;

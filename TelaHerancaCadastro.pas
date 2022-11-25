@@ -18,7 +18,11 @@ type
     { Private declarations }
   public
     { Public declarations }
+  published
+
   end;
+
+
 
 var
   frmTelaHerancaCadastro: TfrmTelaHerancaCadastro;
@@ -26,5 +30,8 @@ var
 implementation
 
 {$R *.dfm}
+
+{ TfrmTelaHerancaCadastro }
+
 
 end.
