@@ -48,7 +48,6 @@ object frmTelaHerancaListagem: TfrmTelaHerancaListagem
       Width = 75
       Height = 25
       Caption = 'Editar'
-      Enabled = False
       TabOrder = 1
     end
     object btnDeletar: TBitBtn

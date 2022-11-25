@@ -14,13 +14,13 @@ type
     edtQuantidade: TEdit;
     lblNome: TLabel;
     lblValor: TLabel;
-    Quantidade: TLabel;
+    lblQuantidade: TLabel;
     lblDataInclusao: TLabel;
     lblDescontoPromocional: TLabel;
     edtDescontoPromocional: TEdit;
     lblDataEdicao: TLabel;
-    deInclusao: TDateEdit;
-    deEdicao: TDateEdit;
+    edtInclusao: TEdit;
+    edtEdicao: TEdit;
     procedure btnSairClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure PrepararModoCadastro();
@@ -125,8 +125,8 @@ begin
     EstadoCadastro := ecCadastrar;
     frmTelaCadastroProdutos.Caption := 'Cadastrando novo Produto';
 
-    deInclusao.Visible := false;
-    deEdicao.Visible := false;
+    edtInclusao.Visible := false;
+    edtEdicao.Visible := false;
     lblDataEdicao.Visible := false;
     lblDataInclusao.Visible := false;
     btnEditar.Enabled := false;
@@ -142,15 +142,20 @@ begin
     edtQuantidade.Enabled:= true;
     lblNome.Enabled:= true;
     lblValor.Enabled:= true;
-    Quantidade.Enabled:= true;
-    lblDataInclusao.Enabled:= true;
     lblDescontoPromocional.Enabled:= true;
+    lblQuantidade.Enabled:= true;
     edtDescontoPromocional.Enabled:= true;
-    lblDataEdicao.Enabled:= true;
-    deInclusao.Enabled:= false;
-    deEdicao.Enabled:= false;
+    edtInclusao.Enabled:= false;
+    edtEdicao.Enabled:= false;
 
     btnEditar.Enabled := false;
+
+    edtNome.Text := oProduto.nome;
+    edtValor.Text:= FloatToStr(oProduto.valor);
+    edtQuantidade.Text:= IntToStr(oProduto.quantidade);
+    edtDescontoPromocional.Text:= IntToStr(oProduto.descontoPromocional);
+    edtInclusao.Text:= oProduto.dataInclusao;
+    edtEdicao.Text:= oProduto.dataEdicao;
 end;
 
 procedure TfrmTelaCadastroProdutos.PrepararModoVisualizacao();
@@ -163,21 +168,21 @@ begin
     edtQuantidade.Enabled:= false;
     lblNome.Enabled:= false;
     lblValor.Enabled:= false;
-    Quantidade.Enabled:= false;
+    lblQuantidade.Enabled:= false;
     lblDataInclusao.Enabled:= false;
     lblDescontoPromocional.Enabled:= false;
     edtDescontoPromocional.Enabled:= false;
     lblDataEdicao.Enabled:= false;
-    deInclusao.Enabled:= false;
-    deEdicao.Enabled:= false;
+    edtInclusao.Enabled:= false;
+    edtEdicao.Enabled:= false;
     btnEditar.Enabled := True;
     //popular os inputs com as informacoes
     edtNome.Text := oProduto.nome;
     edtValor.Text:= FloatToStr(oProduto.valor);
     edtQuantidade.Text:= IntToStr(oProduto.quantidade);
     edtDescontoPromocional.Text:= IntToStr(oProduto.descontoPromocional);
-    deInclusao.Text:= oProduto.dataInclusao;
-    deEdicao.Text:= oProduto.dataEdicao;
+    edtInclusao.Text:= oProduto.dataInclusao;
+    edtEdicao.Text:= oProduto.dataEdicao;
 end;
 
 

@@ -50,6 +50,9 @@ inherited frmTelaListagemProdutos: TfrmTelaListagemProdutos
     inherited btnCadastrar: TBitBtn
       OnClick = btnCadastrarClick
     end
+    inherited btnEditar: TBitBtn
+      OnClick = btnEditarClick
+    end
     inherited btnFechar: TBitBtn
       OnClick = btnFecharClick
     end

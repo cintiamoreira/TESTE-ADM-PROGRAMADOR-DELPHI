@@ -21,6 +21,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure grdListagemDblClick(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
   private
   procedure AbrirTelaCadastro(estadoInicial: TEstadoCadastro; produtoInicial: TProdutos);
     { Private declarations }
@@ -39,6 +40,14 @@ begin
   inherited;
   const produtoInicial = TProdutos.Create(dtmPrincipal.ConexaoDB);
   AbrirTelaCadastro(ecCadastrar, produtoInicial);
+end;
+
+procedure TfrmTelaListagemProdutos.btnEditarClick(Sender: TObject);
+begin
+  inherited;
+  const produtoInicial = TProdutos.Create(dtmPrincipal.ConexaoDB);
+  produtoInicial.Selecionar(QryListagem.FieldByName('id').AsInteger);
+  AbrirTelaCadastro(ecEditar, produtoInicial)
 end;
 
 procedure TfrmTelaListagemProdutos.btnFecharClick(Sender: TObject);
