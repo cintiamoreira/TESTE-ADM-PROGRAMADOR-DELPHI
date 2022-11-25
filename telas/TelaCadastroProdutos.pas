@@ -27,6 +27,8 @@ type
     procedure PrepararModoEdicao();
     procedure PrepararModoVisualizacao();
     procedure btnEditarClick(Sender: TObject);
+    procedure btnOKClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
   private
     { Private declarations }
 
@@ -58,10 +60,36 @@ begin
   oProduto := produtoInicial;
 end;
 
+procedure TfrmTelaCadastroProdutos.btnCancelarClick(Sender: TObject);
+begin
+  inherited;
+  Close;
+end;
+
 procedure TfrmTelaCadastroProdutos.btnEditarClick(Sender: TObject);
 begin
   inherited;
   PrepararModoEdicao();
+end;
+
+procedure TfrmTelaCadastroProdutos.btnOKClick(Sender: TObject);
+begin
+  inherited;
+    if EstadoCadastro = cadastroEnum.ecCadastrar then begin
+      oProduto.nome := edtNome.Text;
+      oProduto.valor := StrToFloat(edtValor.Text);
+      oProduto.quantidade := StrToInt(edtQuantidade.Text);
+      oProduto.descontoPromocional := StrToInt(edtDescontoPromocional.Text);
+
+      const inserirSucesso = oProduto.Inserir();
+      if inserirSucesso then
+         ShowMessage('Inserido com sucesso')
+         else
+         ShowMessage('Ocorreu um erro');
+      Close;
+    end
+    else if EstadoCadastro = cadastroEnum.ecEditar then oProduto.Atualizar()
+    else if EstadoCadastro = cadastroEnum.ecVisualizar then Close
 end;
 
 procedure TfrmTelaCadastroProdutos.btnSairClick(Sender: TObject);
@@ -83,6 +111,9 @@ procedure TfrmTelaCadastroProdutos.PrepararModoCadastro();
 begin
     deInclusao.Visible := false;
     deEdicao.Visible := false;
+    lblDataEdicao.Visible := false;
+    lblDataInclusao.Visible := false;
+    btnEditar.Enabled := false;
 end;
 
 procedure TfrmTelaCadastroProdutos.PrepararModoEdicao();
@@ -97,8 +128,8 @@ begin
     lblDescontoPromocional.Enabled:= true;
     edtDescontoPromocional.Enabled:= true;
     lblDataEdicao.Enabled:= true;
-    deInclusao.Enabled:= true;
-    deEdicao.Enabled:= true;
+    deInclusao.Enabled:= false;
+    deEdicao.Enabled:= false;
 
     btnEditar.Enabled := false;
 end;

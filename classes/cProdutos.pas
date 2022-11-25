@@ -161,16 +161,24 @@ begin
     Qry := TZQuery.Create(nil);
     Qry.Connection := ConexaoDB;
     Qry.SQL.Clear;
-    Qry.SQL.Add('INSERT INTO categorias (descricao) values (:descricao)');
-    Qry.ParamByName('descricao').AsString := Self.F_nome;
+    Qry.SQL.Add(
+    'INSERT INTO produtos (nome, valor, quantidade, desconto_promocional, data_inclusao, data_edicao) ' +
+    'values (:nome, :valor, :quantidade, :desconto_promocional, GETDATE(), GETDATE());'
+    );
+
+    Qry.ParamByName('nome').AsString := Self.F_nome;
+    Qry.ParamByName('valor').AsString := FloatToStr(Self.F_valor);
+    Qry.ParamByName('quantidade').AsString := IntToStr(Self.F_quantidade);
+    Qry.ParamByName('desconto_promocional').AsString := IntToStr(Self.F_desconto_promocional);
 
      try
       ConexaoDB.StartTransaction;
       Qry.ExecSQL;
       ConexaoDB.Commit;
+      Result := True;
     except
       ConexaoDB.Rollback;
-     Result := False;
+      Result := False;
     end;
 
   finally

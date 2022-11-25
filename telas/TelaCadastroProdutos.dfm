@@ -61,7 +61,6 @@ inherited frmTelaCadastroProdutos: TfrmTelaCadastroProdutos
       Top = 98
       Width = 121
       Height = 21
-      NumbersOnly = True
       TabOrder = 1
     end
     object edtQuantidade: TEdit
@@ -98,6 +97,12 @@ inherited frmTelaCadastroProdutos: TfrmTelaCadastroProdutos
     end
   end
   inherited Panel2: TPanel
+    inherited btnOK: TBitBtn
+      OnClick = btnOKClick
+    end
+    inherited btnCancelar: TBitBtn
+      OnClick = btnCancelarClick
+    end
     inherited btnEditar: TBitBtn
       Enabled = True
       OnClick = btnEditarClick
