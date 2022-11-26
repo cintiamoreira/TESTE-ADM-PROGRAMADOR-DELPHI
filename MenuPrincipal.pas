@@ -7,7 +7,8 @@ uses
    System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
    Vcl.Menus, uDTMConexao, TelaListagemProdutos, TelaListagemPedidos,
    TelaListagemClientes, uRelPedidos, TelaFiltroRelatorioProdutos,
-   TelaFiltroRelatorioPedidos, uRelProdutos, uRelProdutosPorData, uRelPedidosPorData;
+   TelaFiltroRelatorioPedidos, uRelProdutos, uRelProdutosPorData, uRelPedidosPorData,
+   TelaListagemFuncionarios;
 
 type
   TfrmPrincipal = class(TForm)
@@ -32,6 +33,7 @@ type
     procedure menuRelatoriosPedidosClick(Sender: TObject);
     procedure menuRelatorioProdutosDataClick(Sender: TObject);
     procedure menuRelatorioPedidosDataClick(Sender: TObject);
+    procedure menuFuncionariosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,6 +45,7 @@ var
   frmRelProdutos: TfrmRelProdutos;
   frmRelProdutosPorData: TfrmRelProdutosPorData;
   frmRelPedidosPorData: TfrmRelPedidosPorData;
+  frmTelaListagemFuncionarios: TfrmTelaListagemFuncionarios;
   frmTelaFiltroRelatorioProdutos: TfrmTelaFiltroRelatorioProdutos;
   frmTelaFiltroRelatorioPedidos: TfrmTelaFiltroRelatorioPedidos;
   frmuRelPedidos : TfrmRelPedidos;
@@ -79,6 +82,13 @@ begin
   frmTelaListagemProdutos := TfrmTelaListagemProdutos.Create(Self);
   frmTelaListagemProdutos.ShowModal;
   frmTelaListagemProdutos.Release;
+end;
+
+procedure TfrmPrincipal.menuFuncionariosClick(Sender: TObject);
+begin
+    frmTelaListagemFuncionarios := TfrmTelaListagemFuncionarios.Create(Self);
+    frmTelaListagemFuncionarios.ShowModal;
+    frmTelaListagemFuncionarios.Release;
 end;
 
 procedure TfrmPrincipal.menuRelatorioPedidosDataClick(Sender: TObject);

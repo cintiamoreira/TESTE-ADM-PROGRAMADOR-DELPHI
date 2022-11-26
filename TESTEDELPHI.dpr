@@ -25,7 +25,10 @@ uses
   uRelPedidos in 'relatorio\uRelPedidos.pas' {frmRelPedidos},
   uRelPedidosPorData in 'relatorio\uRelPedidosPorData.pas' {frmRelPedidosPorData},
   uRelProdutosPorData in 'relatorio\uRelProdutosPorData.pas' {frmRelProdutosPorData},
-  TelaFiltroRelatorioProdutos in 'telas\TelaFiltroRelatorioProdutos.pas' {frmTelaFiltroRelatorioProdutos};
+  TelaFiltroRelatorioProdutos in 'telas\TelaFiltroRelatorioProdutos.pas' {frmTelaFiltroRelatorioProdutos},
+  TelaCadastroFuncionarios in 'telas\TelaCadastroFuncionarios.pas' {frmTelaCadastroFuncionarios},
+  TelaListagemFuncionarios in 'telas\TelaListagemFuncionarios.pas' {frmTelaListagemFuncionarios},
+  cFuncionarios in 'classes\cFuncionarios.pas';
 
 {$R *.res}
 
@@ -33,5 +36,7 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmTelaCadastroFuncionarios, frmTelaCadastroFuncionarios);
+  Application.CreateForm(TfrmTelaListagemFuncionarios, frmTelaListagemFuncionarios);
   Application.Run;
 end.

@@ -42,6 +42,7 @@ object frmPrincipal: TfrmPrincipal
     end
     object menuFuncionarios: TMenuItem
       Caption = 'FUNCION'#193'RIOS'
+      OnClick = menuFuncionariosClick
     end
     object menuRelatorios: TMenuItem
       Caption = 'RELAT'#211'RIOS'

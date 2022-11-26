@@ -9,7 +9,6 @@ inherited frmTelaListagemClientes: TfrmTelaListagemClientes
   inherited grdListagem: TDBGrid
     Width = 917
     Height = 559
-    DataSource = dtsListagem
     OnDblClick = grdListagemDblClick
     Columns = <
       item
@@ -91,7 +90,7 @@ inherited frmTelaListagemClientes: TfrmTelaListagemClientes
     end
   end
   inherited qryListagem: TZQuery
-    Active = True
+    Connection = dtmPrincipal.ConexaoDB
     SQL.Strings = (
       'select * from clientes')
     object qryListagemid: TIntegerField

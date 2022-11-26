@@ -21,6 +21,7 @@ object frmTelaHerancaListagem: TfrmTelaHerancaListagem
     Width = 902
     Height = 470
     Align = alClient
+    DataSource = dtsListagem
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -74,9 +75,8 @@ object frmTelaHerancaListagem: TfrmTelaHerancaListagem
     Top = 54
   end
   object qryListagem: TZQuery
-    Connection = dtmPrincipal.ConexaoDB
     Params = <>
-    Left = 680
-    Top = 54
+    Left = 632
+    Top = 64
   end
 end
