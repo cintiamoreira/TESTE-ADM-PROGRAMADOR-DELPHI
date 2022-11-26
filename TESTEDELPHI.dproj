@@ -149,6 +149,34 @@
         <DCCReference Include="classes\cClientes.pas"/>
         <DCCReference Include="classes\cPedidos.pas"/>
         <DCCReference Include="cadastroEnum.pas"/>
+        <DCCReference Include="TelaHerancaFiltroRelatorio.pas">
+            <Form>frmTelaHerancaFiltroRelatorio</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="telas\TelaFiltroRelatorioPedidos.pas">
+            <Form>frmTelaFiltroRelatorioPedidos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="relatorio\uRelProdutos.pas">
+            <Form>frmRelProdutos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="relatorio\uRelPedidos.pas">
+            <Form>frmRelPedidos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="relatorio\uRelPedidosPorData.pas">
+            <Form>frmRelPedidosPorData</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="relatorio\uRelProdutosPorData.pas">
+            <Form>frmRelProdutosPorData</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="telas\TelaFiltroRelatorioProdutos.pas">
+            <Form>frmTelaFiltroRelatorioProdutos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

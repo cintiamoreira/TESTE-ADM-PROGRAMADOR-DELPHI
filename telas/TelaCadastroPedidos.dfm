@@ -1,116 +1,116 @@
 inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
   Caption = 'Cadastro de Pedidos'
   ClientHeight = 482
-  ClientWidth = 672
+  ClientWidth = 1112
   OnCreate = FormCreate
-  ExplicitWidth = 688
+  ExplicitWidth = 1128
   ExplicitHeight = 521
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
     Top = 285
-    Width = 672
+    Width = 1112
     Height = 133
     ExplicitLeft = 0
     ExplicitTop = 285
     ExplicitWidth = 672
     ExplicitHeight = 133
     object lblQuantidade: TLabel
-      Left = 142
-      Top = 29
+      Left = 910
+      Top = 51
       Width = 83
       Height = 13
       Caption = 'Quantidade Total'
       Enabled = False
     end
     object lblValorTotalDesconto: TLabel
-      Left = 82
-      Top = 76
+      Left = 466
+      Top = 52
       Width = 99
       Height = 13
       Caption = 'Valor Total Desconto'
       Enabled = False
     end
     object lblDescontoPromocional: TLabel
-      Left = 303
-      Top = 71
+      Left = 715
+      Top = 51
       Width = 51
       Height = 13
       Caption = 'Valor Total'
       Enabled = False
     end
     object lblDataInclusao: TLabel
-      Left = 414
-      Top = 59
+      Left = 86
+      Top = 51
       Width = 81
       Height = 13
       Caption = 'Data de Inclus'#227'o'
       Enabled = False
     end
     object lblDataEdicao: TLabel
-      Left = 423
-      Top = 94
+      Left = 95
+      Top = 86
       Width = 72
       Height = 13
       Caption = 'Data de Edi'#231#227'o'
       Enabled = False
     end
     object lblClienteSelecionado: TLabel
-      Left = 82
+      Left = 330
       Top = 6
       Width = 61
       Height = 13
       Caption = 'Selecionado:'
     end
     object lblProdutoSelecionado: TLabel
-      Left = 465
-      Top = 5
+      Left = 1009
+      Top = 6
       Width = 61
       Height = 13
       Caption = 'Selecionado:'
     end
     object edtValorTotalDesconto: TEdit
-      Left = 61
-      Top = 95
+      Left = 445
+      Top = 71
       Width = 120
       Height = 21
       Enabled = False
       TabOrder = 1
     end
     object edtValorTotal: TEdit
-      Left = 263
-      Top = 90
+      Left = 647
+      Top = 71
       Width = 119
       Height = 21
       Enabled = False
       TabOrder = 2
     end
     object edtDataInclusao: TEdit
-      Left = 519
-      Top = 53
+      Left = 191
+      Top = 45
       Width = 112
       Height = 21
       Enabled = False
       TabOrder = 3
     end
     object edtDataEdicao: TEdit
-      Left = 520
-      Top = 91
+      Left = 192
+      Top = 83
       Width = 111
       Height = 21
       Enabled = False
       TabOrder = 4
     end
     object edtQuantidadeTotal: TEdit
-      Left = 132
-      Top = 48
+      Left = 872
+      Top = 71
       Width = 121
       Height = 21
       TabOrder = 0
     end
     object btnCalcular: TBitBtn
-      Left = 263
-      Top = 45
+      Left = 1005
+      Top = 67
       Width = 75
       Height = 25
       Caption = 'Calcular'
@@ -121,29 +121,29 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
   end
   inherited Panel2: TPanel
     Top = 418
-    Width = 672
+    Width = 1112
     ExplicitTop = 418
     ExplicitWidth = 672
     inherited btnOK: TBitBtn
-      Left = 326
+      Left = 766
       Anchors = [akRight, akBottom]
       OnClick = btnOKClick
       ExplicitLeft = 326
     end
     inherited btnCancelar: TBitBtn
-      Left = 407
+      Left = 847
       Anchors = [akRight, akBottom]
       ExplicitLeft = 407
     end
     inherited btnEditar: TBitBtn
-      Left = 488
+      Left = 928
       Anchors = [akRight, akBottom]
       Enabled = True
       OnClick = btnEditarClick
       ExplicitLeft = 488
     end
     inherited btnSair: TBitBtn
-      Left = 569
+      Left = 1009
       Anchors = [akRight, akBottom]
       OnClick = btnSairClick
       ExplicitLeft = 569
@@ -152,14 +152,16 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 672
+    Width = 1112
     Height = 285
     Align = alTop
     TabOrder = 2
+    ExplicitLeft = 40
+    ExplicitWidth = 803
     object grdProdutos: TDBGrid
-      Left = 351
+      Left = 423
       Top = 1
-      Width = 320
+      Width = 688
       Height = 283
       Align = alRight
       DataSource = dtsProdutos
@@ -210,7 +212,7 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
     object grdClientes: TDBGrid
       Left = 1
       Top = 1
-      Width = 321
+      Width = 416
       Height = 283
       Align = alLeft
       DataSource = dtsCliente

@@ -18,7 +18,14 @@ uses
   cProdutos in 'classes\cProdutos.pas',
   cClientes in 'classes\cClientes.pas',
   cPedidos in 'classes\cPedidos.pas',
-  cadastroEnum in 'cadastroEnum.pas';
+  cadastroEnum in 'cadastroEnum.pas',
+  TelaHerancaFiltroRelatorio in 'TelaHerancaFiltroRelatorio.pas' {frmTelaHerancaFiltroRelatorio},
+  TelaFiltroRelatorioPedidos in 'telas\TelaFiltroRelatorioPedidos.pas' {frmTelaFiltroRelatorioPedidos},
+  uRelProdutos in 'relatorio\uRelProdutos.pas' {frmRelProdutos},
+  uRelPedidos in 'relatorio\uRelPedidos.pas' {frmRelPedidos},
+  uRelPedidosPorData in 'relatorio\uRelPedidosPorData.pas' {frmRelPedidosPorData},
+  uRelProdutosPorData in 'relatorio\uRelProdutosPorData.pas' {frmRelProdutosPorData},
+  TelaFiltroRelatorioProdutos in 'telas\TelaFiltroRelatorioProdutos.pas' {frmTelaFiltroRelatorioProdutos};
 
 {$R *.res}
 

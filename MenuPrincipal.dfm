@@ -47,9 +47,19 @@ object frmPrincipal: TfrmPrincipal
       Caption = 'RELAT'#211'RIOS'
       object menuRelatoriosProdutos: TMenuItem
         Caption = 'Relat'#243'rio de Produtos'
+        OnClick = menuRelatoriosProdutosClick
       end
       object menuRelatoriosPedidos: TMenuItem
         Caption = 'Relat'#243'rio de Pedidos'
+        OnClick = menuRelatoriosPedidosClick
+      end
+      object menuRelatorioProdutosData: TMenuItem
+        Caption = 'FILTRO Relat'#243'rio de Produtos por DATA'
+        OnClick = menuRelatorioProdutosDataClick
+      end
+      object menuRelatorioPedidosData: TMenuItem
+        Caption = 'FILTRO Relat'#243'rio de Pedidos por DATA'
+        OnClick = menuRelatorioPedidosDataClick
       end
     end
   end
