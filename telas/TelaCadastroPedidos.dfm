@@ -1,25 +1,27 @@
 inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
   Caption = 'Cadastro de Pedidos'
   ClientHeight = 482
-  ClientWidth = 649
-  ExplicitWidth = 665
+  ClientWidth = 672
+  OnCreate = FormCreate
+  ExplicitWidth = 688
   ExplicitHeight = 521
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
     Top = 285
-    Width = 649
+    Width = 672
     Height = 133
     ExplicitLeft = 0
     ExplicitTop = 285
-    ExplicitWidth = 649
+    ExplicitWidth = 672
     ExplicitHeight = 133
     object lblQuantidade: TLabel
-      Left = 271
-      Top = 17
+      Left = 142
+      Top = 29
       Width = 83
       Height = 13
       Caption = 'Quantidade Total'
+      Enabled = False
     end
     object lblValorTotalDesconto: TLabel
       Left = 82
@@ -27,6 +29,7 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
       Width = 99
       Height = 13
       Caption = 'Valor Total Desconto'
+      Enabled = False
     end
     object lblDescontoPromocional: TLabel
       Left = 303
@@ -34,6 +37,7 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
       Width = 51
       Height = 13
       Caption = 'Valor Total'
+      Enabled = False
     end
     object lblDataInclusao: TLabel
       Left = 414
@@ -41,6 +45,7 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
       Width = 81
       Height = 13
       Caption = 'Data de Inclus'#227'o'
+      Enabled = False
     end
     object lblDataEdicao: TLabel
       Left = 423
@@ -48,6 +53,7 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
       Width = 72
       Height = 13
       Caption = 'Data de Edi'#231#227'o'
+      Enabled = False
     end
     object lblClienteSelecionado: TLabel
       Left = 82
@@ -63,33 +69,28 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
       Height = 13
       Caption = 'Selecionado:'
     end
-    object edtQuantidadeTotal: TEdit
-      Left = 262
-      Top = 36
-      Width = 120
-      Height = 21
-      NumbersOnly = True
-      TabOrder = 0
-    end
     object edtValorTotalDesconto: TEdit
-      Left = 67
+      Left = 61
       Top = 95
       Width = 120
       Height = 21
-      TabOrder = 2
+      Enabled = False
+      TabOrder = 1
     end
     object edtValorTotal: TEdit
       Left = 263
       Top = 90
       Width = 119
       Height = 21
-      TabOrder = 1
+      Enabled = False
+      TabOrder = 2
     end
     object edtDataInclusao: TEdit
       Left = 519
       Top = 53
       Width = 112
       Height = 21
+      Enabled = False
       TabOrder = 3
     end
     object edtDataEdicao: TEdit
@@ -97,45 +98,66 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
       Top = 91
       Width = 111
       Height = 21
+      Enabled = False
       TabOrder = 4
+    end
+    object edtQuantidadeTotal: TEdit
+      Left = 132
+      Top = 48
+      Width = 121
+      Height = 21
+      TabOrder = 0
+    end
+    object btnCalcular: TBitBtn
+      Left = 263
+      Top = 45
+      Width = 75
+      Height = 25
+      Caption = 'Calcular'
+      Enabled = False
+      TabOrder = 5
+      OnClick = btnCalcularClick
     end
   end
   inherited Panel2: TPanel
     Top = 418
-    Width = 649
+    Width = 672
     ExplicitTop = 418
-    ExplicitWidth = 649
+    ExplicitWidth = 672
     inherited btnOK: TBitBtn
-      Left = 303
+      Left = 326
       Anchors = [akRight, akBottom]
-      ExplicitLeft = 303
+      OnClick = btnOKClick
+      ExplicitLeft = 326
     end
     inherited btnCancelar: TBitBtn
-      Left = 384
+      Left = 407
       Anchors = [akRight, akBottom]
-      ExplicitLeft = 384
+      ExplicitLeft = 407
     end
     inherited btnEditar: TBitBtn
-      Left = 465
+      Left = 488
       Anchors = [akRight, akBottom]
-      ExplicitLeft = 465
+      Enabled = True
+      OnClick = btnEditarClick
+      ExplicitLeft = 488
     end
     inherited btnSair: TBitBtn
-      Left = 546
+      Left = 569
       Anchors = [akRight, akBottom]
       OnClick = btnSairClick
-      ExplicitLeft = 546
+      ExplicitLeft = 569
     end
   end
   object Panel3: TPanel
     Left = 0
     Top = 0
-    Width = 649
+    Width = 672
     Height = 285
     Align = alTop
     TabOrder = 2
     object grdProdutos: TDBGrid
-      Left = 328
+      Left = 351
       Top = 1
       Width = 320
       Height = 283
@@ -149,6 +171,11 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
       TitleFont.Style = []
       OnCellClick = grdProdutosCellClick
       Columns = <
+        item
+          Expanded = False
+          FieldName = 'id'
+          Visible = True
+        end
         item
           Expanded = False
           FieldName = 'nome'
@@ -167,6 +194,16 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
         item
           Expanded = False
           FieldName = 'desconto_promocional'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'data_inclusao'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'data_edicao'
           Visible = True
         end>
     end
@@ -187,6 +224,11 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
       Columns = <
         item
           Expanded = False
+          FieldName = 'id'
+          Visible = True
+        end
+        item
+          Expanded = False
           FieldName = 'nome'
           Visible = True
         end
@@ -202,7 +244,32 @@ inherited frmTelaCadastroPedidos: TfrmTelaCadastroPedidos
         end
         item
           Expanded = False
+          FieldName = 'endereco'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'cep'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'telefone'
+          Visible = True
+        end
+        item
+          Expanded = False
           FieldName = 'celular'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'data_inclusao'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'data_edicao'
           Visible = True
         end>
     end

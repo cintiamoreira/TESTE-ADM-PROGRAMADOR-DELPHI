@@ -96,7 +96,7 @@ var Qry:TZQuery;
 begin
   if MessageDlg('Apagar o Registro: '+#13+#13+
                 'Código: '+IntToStr (F_id) +#13+
-                'Descrição: '+F_data_inclusao,mtConfirmation, [mbYes, mbNo],0)=mrNo
+                'Valor total: '+FloatToStr(F_valor_total),mtConfirmation, [mbYes, mbNo],0)=mrNo
   then begin
       Result := false;
       Abort;
@@ -107,15 +107,16 @@ begin
     Qry := TZQuery.Create(nil);
     Qry.Connection := ConexaoDB;
     Qry.SQL.Clear;
-    Qry.SQL.Add('DELETE FROM categorias ' +
-                '   WHERE categoriaId =:categoriaId ');
+    Qry.SQL.Add('DELETE FROM pedidos ' +
+                '   WHERE id =:pedidoId ');
 
-    Qry.ParamByName('categoriaId').AsInteger := F_id;
+    Qry.ParamByName('pedidoId').AsInteger := F_id;
 
     try
       ConexaoDB.StartTransaction;
       Qry.ExecSQL;
       ConexaoDB.Commit;
+      Result := true;
     except
       ConexaoDB.Rollback;
      Result := False;
@@ -135,20 +136,29 @@ begin
     Qry := TZQuery.Create(nil);
     Qry.Connection := ConexaoDB;
     Qry.SQL.Clear;
-    Qry.SQL.Add('UPDATE categorias ' +
-                '   SET descricao =:descricao ' +
-                '   WHERE categoriaId =:categoriaId ');
+    Qry.SQL.Add('UPDATE pedidos ' +
+                '   SET id_produto =:idProduto, ' +
+                '   id_cliente =:idCliente, ' +
+                '   qtd_total =:qtdTotal, ' +
+                '   valor_total =:valorTotal, ' +
+                '   valor_total_desconto =:valorTotalDesconto ' +
+                '   WHERE id =:idPedido ');
 
-    Qry.ParamByName('categoriaId').AsInteger := Self.F_id;
-    Qry.ParamByName('descricao').AsString    := Self.F_data_inclusao;
+    Qry.ParamByName('idPedido').AsInteger := Self.F_id;
+    Qry.ParamByName('idProduto').AsInteger    := Self.F_id_produto;
+    Qry.ParamByName('idCliente').AsInteger    := Self.F_id_cliente;
+    Qry.ParamByName('qtdTotal').AsInteger    := Self.F_quantidade_total;
+    Qry.ParamByName('valorTotal').AsFloat    := Self.F_valor_total;
+    Qry.ParamByName('valorTotalDesconto').AsFloat    := Self.F_valor_total_desconto;
 
     try
       ConexaoDB.StartTransaction;
       Qry.ExecSQL;
       ConexaoDB.Commit;
+      Result := true;
     except
       ConexaoDB.Rollback;
-     Result := False;
+      Result := False;
     end;
 
   finally
@@ -165,13 +175,20 @@ begin
     Qry := TZQuery.Create(nil);
     Qry.Connection := ConexaoDB;
     Qry.SQL.Clear;
-    Qry.SQL.Add('INSERT INTO categorias (descricao) values (:descricao)');
-    Qry.ParamByName('descricao').AsString := Self.F_data_inclusao;
+    Qry.SQL.Add('INSERT INTO pedidos (id_produto, id_cliente, qtd_total, valor_total, valor_total_desconto, data_inclusao, data_edicao)' +
+    ' values (:idProduto, :idCliente, :qtdTotal, :valorTotal, :valorTotalDesconto, GETDATE(), GETDATE())');
+
+    Qry.ParamByName('idProduto').AsInteger := Self.F_id_produto;
+    Qry.ParamByName('idCliente').AsInteger := Self.F_id_cliente;
+    Qry.ParamByName('qtdTotal').AsInteger := Self.F_quantidade_total;
+    Qry.ParamByName('valorTotal').AsFloat := Self.F_valor_total;
+    Qry.ParamByName('valorTotalDesconto').AsFloat := Self.F_valor_total_desconto;
 
      try
       ConexaoDB.StartTransaction;
       Qry.ExecSQL;
       ConexaoDB.Commit;
+      Result := true;
     except
       ConexaoDB.Rollback;
      Result := False;
@@ -192,17 +209,23 @@ begin
       Qry.Connection := ConexaoDB;
       Qry.SQL.Clear;
 
-      Qry.SQL.Add ('SELECT categoriaId, descricao ' +
-                  'FROM categorias ' +
-                  'WHERE categoriaId=:categoriaId');
+      Qry.SQL.Add ('SELECT * ' +
+                  'FROM pedidos ' +
+                  'WHERE id=:idPedido');
 
-      Qry.ParamByName('categoriaId').AsInteger := id;
+      Qry.ParamByName('idPedido').AsInteger := id;
 
       try
         Qry.Open;
 
-        Self.F_id := Qry.FieldByName('categoriaId').AsInteger;
-        Self.F_data_inclusao   := Qry.FieldByName('descricao').AsString;
+        Self.F_id := Qry.FieldByName('id').AsInteger;
+        Self.F_id_produto   := Qry.FieldByName('id_produto').AsInteger;
+        Self.F_id_cliente   := Qry.FieldByName('id_cliente').AsInteger;
+        Self.F_quantidade_total   := Qry.FieldByName('qtd_total').AsInteger;
+        Self.F_valor_total   := Qry.FieldByName('valor_total').AsFloat;
+        Self.F_valor_total_desconto   := Qry.FieldByName('valor_total_desconto').AsFloat;
+        Self.F_data_inclusao   := Qry.FieldByName('data_inclusao').AsString;
+        Self.F_data_edicao   := Qry.FieldByName('data_edicao').AsString;
       except
          Result := False;
       end;

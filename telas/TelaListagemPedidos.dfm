@@ -10,6 +10,7 @@ inherited frmTelaListagemPedidos: TfrmTelaListagemPedidos
     Width = 697
     Height = 507
     DataSource = dtsListagem
+    OnDblClick = grdListagemDblClick
     Columns = <
       item
         Expanded = False
@@ -66,11 +67,13 @@ inherited frmTelaListagemPedidos: TfrmTelaListagemPedidos
     inherited btnEditar: TBitBtn
       Left = 439
       Anchors = [akRight, akBottom]
+      OnClick = btnEditarClick
       ExplicitLeft = 439
     end
     inherited btnDeletar: TBitBtn
       Left = 520
       Anchors = [akRight, akBottom]
+      OnClick = btnDeletarClick
       ExplicitLeft = 520
     end
     inherited btnFechar: TBitBtn

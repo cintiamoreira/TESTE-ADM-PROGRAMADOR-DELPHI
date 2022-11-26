@@ -253,7 +253,7 @@ end;
 
 function TProdutos.getValor: Double;
 begin
-  Result := Self.F_Valor;
+  Result := Self.F_valor;
 end;
 function TProdutos.getQuantidade: Integer;
 begin
